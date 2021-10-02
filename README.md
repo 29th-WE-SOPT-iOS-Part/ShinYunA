@@ -1,6 +1,6 @@
 ## Shin Yoon A 
 
-![image](https://user-images.githubusercontent.com/55099365/135708398-c6a0b9fc-f807-4002-b560-698c9d9e069d.png)
+![KakaoTalk_Photo_2021-10-02-18-59-52](https://user-images.githubusercontent.com/55099365/135711597-5ab7e5b5-b74a-4f6e-a5a2-50b5f8534ec6.png)
 
 <br/> <br/>
 
