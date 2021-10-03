@@ -18,6 +18,7 @@
 		EDF32EC7270A1FA500BE49FC /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32EC6270A1FA500BE49FC /* LoginTextField.swift */; };
 		EDF32EC9270A244000BE49FC /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32EC8270A244000BE49FC /* UITextField+.swift */; };
 		EDF32ECB270A283F00BE49FC /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32ECA270A283F00BE49FC /* SignupVC.swift */; };
+		EDF32ECD270A2ED500BE49FC /* CheckVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32ECC270A2ED500BE49FC /* CheckVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		EDF32EC6270A1FA500BE49FC /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		EDF32EC8270A244000BE49FC /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		EDF32ECA270A283F00BE49FC /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		EDF32ECC270A2ED500BE49FC /* CheckVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckVC.swift; sourceTree = "<group>"; };
 		F25B8480B7A2E84F5C29634D /* Pods-Youtube-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube-Clone.release.xcconfig"; path = "Target Support Files/Pods-Youtube-Clone/Pods-Youtube-Clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 			children = (
 				EDF32EC0270A15C200BE49FC /* LoginVC.swift */,
 				EDF32ECA270A283F00BE49FC /* SignupVC.swift */,
+				EDF32ECC270A2ED500BE49FC /* CheckVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF32ECD270A2ED500BE49FC /* CheckVC.swift in Sources */,
 				EDF32ECB270A283F00BE49FC /* SignupVC.swift in Sources */,
 				EDF32E9F270A0F9400BE49FC /* AppDelegate.swift in Sources */,
 				EDF32EC3270A19E400BE49FC /* UIColor+.swift in Sources */,
