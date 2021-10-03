@@ -13,6 +13,7 @@
 		EDF32EAB270A0F9700BE49FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF32EAA270A0F9700BE49FC /* Assets.xcassets */; };
 		EDF32EAE270A0F9700BE49FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF32EAC270A0F9700BE49FC /* LaunchScreen.storyboard */; };
 		EDF32EC1270A15C200BE49FC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32EC0270A15C200BE49FC /* LoginVC.swift */; };
+		EDF32EC3270A19E400BE49FC /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32EC2270A19E400BE49FC /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		EDF32EAD270A0F9700BE49FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDF32EAF270A0F9700BE49FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF32EC0270A15C200BE49FC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		EDF32EC2270A19E400BE49FC /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		F25B8480B7A2E84F5C29634D /* Pods-Youtube-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube-Clone.release.xcconfig"; path = "Target Support Files/Pods-Youtube-Clone/Pods-Youtube-Clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +48,6 @@
 				6361FB9BF21A793637C74691 /* Pods-Youtube-Clone.debug.xcconfig */,
 				F25B8480B7A2E84F5C29634D /* Pods-Youtube-Clone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -118,6 +119,7 @@
 		EDF32EB9270A146C00BE49FC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EDF32EC2270A19E400BE49FC /* UIColor+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -268,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDF32E9F270A0F9400BE49FC /* AppDelegate.swift in Sources */,
+				EDF32EC3270A19E400BE49FC /* UIColor+.swift in Sources */,
 				EDF32EC1270A15C200BE49FC /* LoginVC.swift in Sources */,
 				EDF32EA9270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld in Sources */,
 			);
