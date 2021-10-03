@@ -8,23 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		EDF32E9F270A0F9400BE49FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32E9E270A0F9400BE49FC /* AppDelegate.swift */; };
-		EDF32EA1270A0F9400BE49FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32EA0270A0F9400BE49FC /* SceneDelegate.swift */; };
 		EDF32EA9270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF32EA7270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld */; };
 		EDF32EAB270A0F9700BE49FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF32EAA270A0F9700BE49FC /* Assets.xcassets */; };
 		EDF32EAE270A0F9700BE49FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF32EAC270A0F9700BE49FC /* LaunchScreen.storyboard */; };
-		EDF32EBF270A15B500BE49FC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF32EBE270A15B500BE49FC /* Login.storyboard */; };
 		EDF32EC1270A15C200BE49FC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32EC0270A15C200BE49FC /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EDF32E9B270A0F9400BE49FC /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF32E9E270A0F9400BE49FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EDF32EA0270A0F9400BE49FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EDF32EA8270A0F9400BE49FC /* Youtube_Clone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Youtube_Clone.xcdatamodel; sourceTree = "<group>"; };
 		EDF32EAA270A0F9700BE49FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDF32EAD270A0F9700BE49FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDF32EAF270A0F9700BE49FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDF32EBE270A15B500BE49FC /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		EDF32EC0270A15C200BE49FC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,7 +66,7 @@
 				EDF32EAF270A0F9700BE49FC /* Info.plist */,
 				EDF32EAA270A0F9700BE49FC /* Assets.xcassets */,
 				EDF32EBD270A151800BE49FC /* Storage */,
-				EDF32EBC270A14FD00BE49FC /* Storyboards */,
+				EDF32EBC270A14FD00BE49FC /* Storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -112,18 +108,16 @@
 			isa = PBXGroup;
 			children = (
 				EDF32E9E270A0F9400BE49FC /* AppDelegate.swift */,
-				EDF32EA0270A0F9400BE49FC /* SceneDelegate.swift */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
 		};
-		EDF32EBC270A14FD00BE49FC /* Storyboards */ = {
+		EDF32EBC270A14FD00BE49FC /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				EDF32EAC270A0F9700BE49FC /* LaunchScreen.storyboard */,
-				EDF32EBE270A15B500BE49FC /* Login.storyboard */,
 			);
-			path = Storyboards;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		EDF32EBD270A151800BE49FC /* Storage */ = {
@@ -194,7 +188,6 @@
 			files = (
 				EDF32EAE270A0F9700BE49FC /* LaunchScreen.storyboard in Resources */,
 				EDF32EAB270A0F9700BE49FC /* Assets.xcassets in Resources */,
-				EDF32EBF270A15B500BE49FC /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +199,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDF32E9F270A0F9400BE49FC /* AppDelegate.swift in Sources */,
-				EDF32EA1270A0F9400BE49FC /* SceneDelegate.swift in Sources */,
 				EDF32EC1270A15C200BE49FC /* LoginVC.swift in Sources */,
 				EDF32EA9270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld in Sources */,
 			);
@@ -354,7 +346,6 @@
 				INFOPLIST_FILE = "Youtube-Clone/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -382,7 +373,6 @@
 				INFOPLIST_FILE = "Youtube-Clone/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
