@@ -35,6 +35,7 @@ class LoginVC: UIViewController {
         $0.setTitleColor(.googleBlue, for: .normal)
         $0.setTitleColor(.googleBlue.withAlphaComponent(0.7), for: .highlighted)
         $0.titleLabel?.font = .systemFont(ofSize: 15)
+        $0.addTarget(self, action: #selector(touchUpSignUp), for: .touchUpInside)
     }
     private let signinButton = UIButton().then {
         $0.setTitle("다음", for: .normal)
@@ -42,6 +43,7 @@ class LoginVC: UIViewController {
         $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
         $0.backgroundColor = .googleBlue
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(touchUpSignIn), for: .touchUpInside)
     }
     private lazy var loginStackView = UIStackView().then {
         $0.alignment = .fill
@@ -97,5 +99,18 @@ class LoginVC: UIViewController {
             $0.width.equalTo(70)
             $0.height.equalTo(35)
         }
+    }
+    
+    // MARK: - @objc
+    @objc
+    private func touchUpSignUp() {
+        let vc = SignupVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc
+    private func touchUpSignIn() {
+        let vc = CheckVC()
+        present(vc, animated: true, completion: nil)
     }
 }

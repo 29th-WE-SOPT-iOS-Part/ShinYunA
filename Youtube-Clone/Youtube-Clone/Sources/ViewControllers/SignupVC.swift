@@ -55,6 +55,7 @@ class SignupVC: UIViewController {
     // MARK: - App Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         setupLayout()
     }
     
