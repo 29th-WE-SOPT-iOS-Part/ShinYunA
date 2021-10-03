@@ -40,6 +40,7 @@ class SignupVC: UIViewController {
         configuration.baseForegroundColor = .lightGray
         configuration.attributedTitle = AttributedString("비밀번호 표시", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
         $0.configuration = configuration
+        $0.addTarget(self, action: #selector(touchUpShowPassword), for: .touchUpInside)
     }
     private lazy var loginStackView = UIStackView().then {
         $0.alignment = .fill
@@ -53,6 +54,9 @@ class SignupVC: UIViewController {
     private let nameTextfield = LoginTextField(placeholder: "이름을 입력해주세요")
     private let accountTextfield = LoginTextField(placeholder: "이메일 또는 휴대전화")
     private let passwordTextfield = LoginTextField(placeholder: "비밀번호 입력", isSecureTextEntry: true)
+    
+    // MARK: - Properties
+    private var canShow = false
 
     // MARK: - App Cycle
     override func viewDidLoad() {
@@ -108,6 +112,33 @@ class SignupVC: UIViewController {
             vc.titleLabel.text = text + "님\n환영합니다!"
         }
         present(vc, animated: true, completion: nil)
+    }
+    
+    @objc
+    private func touchUpShowPassword() {
+        if !canShow {
+            var configuration = UIButton.Configuration.plain()
+            configuration.image = UIImage(systemName: "checkmark.square.fill")
+            configuration.titlePadding = 10
+            configuration.imagePadding = 10
+            configuration.baseForegroundColor = .googleBlue
+            configuration.attributedTitle = AttributedString("비밀번호 표시", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
+            showPasswordButton.configuration = configuration
+            
+            passwordTextfield.isSecureTextEntry = false
+        } else {
+            var configuration = UIButton.Configuration.plain()
+            configuration.image = UIImage(systemName: "square")
+            configuration.titlePadding = 10
+            configuration.imagePadding = 10
+            configuration.baseForegroundColor = .lightGray
+            configuration.attributedTitle = AttributedString("비밀번호 표시", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
+            showPasswordButton.configuration = configuration
+            
+            passwordTextfield.isSecureTextEntry = true
+        }
+        
+        canShow.toggle()
     }
 }
 
