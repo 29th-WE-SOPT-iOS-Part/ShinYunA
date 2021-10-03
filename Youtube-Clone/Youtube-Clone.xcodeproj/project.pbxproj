@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDF32E9F270A0F9400BE49FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32E9E270A0F9400BE49FC /* AppDelegate.swift */; };
+		EDF32EA1270A0F9400BE49FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32EA0270A0F9400BE49FC /* SceneDelegate.swift */; };
+		EDF32EA9270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF32EA7270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld */; };
+		EDF32EAB270A0F9700BE49FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF32EAA270A0F9700BE49FC /* Assets.xcassets */; };
+		EDF32EAE270A0F9700BE49FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF32EAC270A0F9700BE49FC /* LaunchScreen.storyboard */; };
+		EDF32EBF270A15B500BE49FC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF32EBE270A15B500BE49FC /* Login.storyboard */; };
+		EDF32EC1270A15C200BE49FC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32EC0270A15C200BE49FC /* LoginVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EDF32E9B270A0F9400BE49FC /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDF32E9E270A0F9400BE49FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDF32EA0270A0F9400BE49FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EDF32EA8270A0F9400BE49FC /* Youtube_Clone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Youtube_Clone.xcdatamodel; sourceTree = "<group>"; };
+		EDF32EAA270A0F9700BE49FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDF32EAD270A0F9700BE49FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDF32EAF270A0F9700BE49FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDF32EBE270A15B500BE49FC /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		EDF32EC0270A15C200BE49FC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDF32E98270A0F9400BE49FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDF32E92270A0F9400BE49FC = {
+			isa = PBXGroup;
+			children = (
+				EDF32E9D270A0F9400BE49FC /* Youtube-Clone */,
+				EDF32E9C270A0F9400BE49FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDF32E9C270A0F9400BE49FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDF32E9B270A0F9400BE49FC /* Youtube-Clone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDF32E9D270A0F9400BE49FC /* Youtube-Clone */ = {
+			isa = PBXGroup;
+			children = (
+				EDF32EB7270A145B00BE49FC /* Sources */,
+				EDF32EB6270A145000BE49FC /* Resources */,
+			);
+			path = "Youtube-Clone";
+			sourceTree = "<group>";
+		};
+		EDF32EB6270A145000BE49FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EDF32EAF270A0F9700BE49FC /* Info.plist */,
+				EDF32EAA270A0F9700BE49FC /* Assets.xcassets */,
+				EDF32EBD270A151800BE49FC /* Storage */,
+				EDF32EBC270A14FD00BE49FC /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EDF32EB7270A145B00BE49FC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EDF32EBB270A14EE00BE49FC /* Supports */,
+				EDF32EB9270A146C00BE49FC /* Extensions */,
+				EDF32EBA270A147400BE49FC /* Views */,
+				EDF32EB8270A146500BE49FC /* ViewControllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		EDF32EB8270A146500BE49FC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDF32EC0270A15C200BE49FC /* LoginVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EDF32EB9270A146C00BE49FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EDF32EBA270A147400BE49FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EDF32EBB270A14EE00BE49FC /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				EDF32E9E270A0F9400BE49FC /* AppDelegate.swift */,
+				EDF32EA0270A0F9400BE49FC /* SceneDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		EDF32EBC270A14FD00BE49FC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EDF32EAC270A0F9700BE49FC /* LaunchScreen.storyboard */,
+				EDF32EBE270A15B500BE49FC /* Login.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EDF32EBD270A151800BE49FC /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				EDF32EA7270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDF32E9A270A0F9400BE49FC /* Youtube-Clone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDF32EB2270A0F9700BE49FC /* Build configuration list for PBXNativeTarget "Youtube-Clone" */;
+			buildPhases = (
+				EDF32E97270A0F9400BE49FC /* Sources */,
+				EDF32E98270A0F9400BE49FC /* Frameworks */,
+				EDF32E99270A0F9400BE49FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Youtube-Clone";
+			productName = "Youtube-Clone";
+			productReference = EDF32E9B270A0F9400BE49FC /* Youtube-Clone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDF32E93270A0F9400BE49FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					EDF32E9A270A0F9400BE49FC = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = EDF32E96270A0F9400BE49FC /* Build configuration list for PBXProject "Youtube-Clone" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDF32E92270A0F9400BE49FC;
+			productRefGroup = EDF32E9C270A0F9400BE49FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDF32E9A270A0F9400BE49FC /* Youtube-Clone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDF32E99270A0F9400BE49FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDF32EAE270A0F9700BE49FC /* LaunchScreen.storyboard in Resources */,
+				EDF32EAB270A0F9700BE49FC /* Assets.xcassets in Resources */,
+				EDF32EBF270A15B500BE49FC /* Login.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDF32E97270A0F9400BE49FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDF32E9F270A0F9400BE49FC /* AppDelegate.swift in Sources */,
+				EDF32EA1270A0F9400BE49FC /* SceneDelegate.swift in Sources */,
+				EDF32EC1270A15C200BE49FC /* LoginVC.swift in Sources */,
+				EDF32EA9270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EDF32EAC270A0F9700BE49FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDF32EAD270A0F9700BE49FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDF32EB0270A0F9700BE49FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDF32EB1270A0F9700BE49FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDF32EB3270A0F9700BE49FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QG3GC35LA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Youtube-Clone/Resources/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiekle.Youtube-Clone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDF32EB4270A0F9700BE49FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QG3GC35LA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Youtube-Clone/Resources/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiekle.Youtube-Clone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDF32E96270A0F9400BE49FC /* Build configuration list for PBXProject "Youtube-Clone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDF32EB0270A0F9700BE49FC /* Debug */,
+				EDF32EB1270A0F9700BE49FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDF32EB2270A0F9700BE49FC /* Build configuration list for PBXNativeTarget "Youtube-Clone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDF32EB3270A0F9700BE49FC /* Debug */,
+				EDF32EB4270A0F9700BE49FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EDF32EA7270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EDF32EA8270A0F9400BE49FC /* Youtube_Clone.xcdatamodel */,
+			);
+			currentVersion = EDF32EA8270A0F9400BE49FC /* Youtube_Clone.xcdatamodel */;
+			path = Youtube_Clone.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EDF32E93270A0F9400BE49FC /* Project object */;
+}
