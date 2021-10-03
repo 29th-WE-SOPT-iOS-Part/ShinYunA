@@ -29,6 +29,7 @@ class SignupVC: UIViewController {
         $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
         $0.backgroundColor = .googleBlue
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(touchUpSignIn), for: .touchUpInside)
     }
     private var showPasswordButton = UIButton().then {
         var configuration = UIButton.Configuration.plain()
@@ -88,5 +89,12 @@ class SignupVC: UIViewController {
             $0.leading.trailing.equalToSuperview().inset(30)
             $0.height.equalTo(40)
         }
+    }
+    
+    // MARK: - @objc
+    @objc
+    private func touchUpSignIn() {
+        let vc = CheckVC()
+        present(vc, animated: true, completion: nil)
     }
 }
