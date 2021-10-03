@@ -62,6 +62,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+        setupTextfield()
     }
     
     // MARK: - Custom Method
@@ -101,6 +102,12 @@ class LoginVC: UIViewController {
         }
     }
     
+    private func setupTextfield() {
+        nameTextfield.delegate = self
+        accountTextfield.delegate = self
+        passwordTextfield.delegate = self
+    }
+    
     // MARK: - @objc
     @objc
     private func touchUpSignUp() {
@@ -111,6 +118,13 @@ class LoginVC: UIViewController {
     @objc
     private func touchUpSignIn() {
         let vc = CheckVC()
+        if let text = nameTextfield.text {
+            vc.titleLabel.text = text + "님\n환영합니다!"
+        }
         present(vc, animated: true, completion: nil)
     }
+}
+
+extension LoginVC: UITextFieldDelegate {
+    
 }

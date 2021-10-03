@@ -10,17 +10,16 @@ import UIKit
 class CheckVC: UIViewController {
     
     // MARK: - UI
-    private let logoLabel = UILabel().then {
-        $0.text = "Google"
-        $0.font = .boldSystemFont(ofSize: 40)
-        $0.textColor = .black
-    }
-    private let titleLabel = UILabel().then {
-        $0.text = "신윤아님\n환영합니다!"
+    var titleLabel = UILabel().then {
         $0.font = .boldSystemFont(ofSize: 30)
         $0.textColor = .black
         $0.numberOfLines = 2
         $0.textAlignment = .center
+    }
+    private let logoLabel = UILabel().then {
+        $0.text = "Google"
+        $0.font = .boldSystemFont(ofSize: 40)
+        $0.textColor = .black
     }
     private let signinButton = UIButton().then {
         $0.setTitle("확인", for: .normal)

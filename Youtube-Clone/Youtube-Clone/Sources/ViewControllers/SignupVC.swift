@@ -95,6 +95,9 @@ class SignupVC: UIViewController {
     @objc
     private func touchUpSignIn() {
         let vc = CheckVC()
+        if let text = nameTextfield.text {
+            vc.titleLabel.text = text + "님\n환영합니다!"
+        }
         present(vc, animated: true, completion: nil)
     }
 }
