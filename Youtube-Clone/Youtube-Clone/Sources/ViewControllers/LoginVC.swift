@@ -129,8 +129,10 @@ class LoginVC: UIViewController {
 
 extension LoginVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let isEmpty = textField.text?.isEmpty {
-            if isEmpty {
+        if let isNameEmpty = nameTextfield.text?.isEmpty,
+           let isAccountEmpty = accountTextfield.text?.isEmpty,
+           let isPasswordEmpty = passwordTextfield.text?.isEmpty {
+            if isNameEmpty || isAccountEmpty || isPasswordEmpty {
                 signinButton.isEnabled = false
                 signinButton.backgroundColor = .lightGray
             } else {
