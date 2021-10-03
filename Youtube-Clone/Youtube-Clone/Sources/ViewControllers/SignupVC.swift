@@ -142,6 +142,7 @@ class SignupVC: UIViewController {
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension SignupVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let isNameEmpty = nameTextfield.text?.isEmpty,

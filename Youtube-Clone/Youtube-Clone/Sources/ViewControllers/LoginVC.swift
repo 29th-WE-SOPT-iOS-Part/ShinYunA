@@ -127,6 +127,7 @@ class LoginVC: UIViewController {
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension LoginVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let isNameEmpty = nameTextfield.text?.isEmpty,

@@ -26,6 +26,7 @@ class LoginTextField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Setup Method
     private func configUI() {
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.darkGray.cgColor
