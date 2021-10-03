@@ -41,8 +41,9 @@ class LoginVC: UIViewController {
         $0.setTitle("다음", for: .normal)
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
-        $0.backgroundColor = .googleBlue
+        $0.backgroundColor = .lightGray
         $0.layer.cornerRadius = 10
+        $0.isEnabled = true
         $0.addTarget(self, action: #selector(touchUpSignIn), for: .touchUpInside)
     }
     private lazy var loginStackView = UIStackView().then {
@@ -63,9 +64,10 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         setupLayout()
         setupTextfield()
+        hideKeyboardWhenTappedAround()
     }
     
-    // MARK: - Custom Method
+    // MARK: - Setup Method
     private func setupLayout() {
         view.addSubviews([logoLabel,
                          titleLabel,
@@ -126,5 +128,30 @@ class LoginVC: UIViewController {
 }
 
 extension LoginVC: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let isEmpty = textField.text?.isEmpty {
+            if isEmpty {
+                signinButton.isEnabled = false
+                signinButton.backgroundColor = .lightGray
+            } else {
+                signinButton.isEnabled = true
+                signinButton.backgroundColor = .googleBlue
+            }
+        }
+    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case nameTextfield:
+            accountTextfield.becomeFirstResponder()
+        case accountTextfield:
+            passwordTextfield.becomeFirstResponder()
+        case passwordTextfield:
+            passwordTextfield.resignFirstResponder()
+        default:
+            break
+        }
+        
+        return true
+    }
 }

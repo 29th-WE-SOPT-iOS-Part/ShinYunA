@@ -19,6 +19,7 @@
 		EDF32EC9270A244000BE49FC /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32EC8270A244000BE49FC /* UITextField+.swift */; };
 		EDF32ECB270A283F00BE49FC /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32ECA270A283F00BE49FC /* SignupVC.swift */; };
 		EDF32ECD270A2ED500BE49FC /* CheckVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32ECC270A2ED500BE49FC /* CheckVC.swift */; };
+		EDF32ECF270A38E300BE49FC /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32ECE270A38E300BE49FC /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		EDF32EC8270A244000BE49FC /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		EDF32ECA270A283F00BE49FC /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		EDF32ECC270A2ED500BE49FC /* CheckVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckVC.swift; sourceTree = "<group>"; };
+		EDF32ECE270A38E300BE49FC /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		F25B8480B7A2E84F5C29634D /* Pods-Youtube-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube-Clone.release.xcconfig"; path = "Target Support Files/Pods-Youtube-Clone/Pods-Youtube-Clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 				EDF32EC2270A19E400BE49FC /* UIColor+.swift */,
 				EDF32EC4270A1DDC00BE49FC /* UIView+.swift */,
 				EDF32EC8270A244000BE49FC /* UITextField+.swift */,
+				EDF32ECE270A38E300BE49FC /* UIViewController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				EDF32ECD270A2ED500BE49FC /* CheckVC.swift in Sources */,
 				EDF32ECB270A283F00BE49FC /* SignupVC.swift in Sources */,
+				EDF32ECF270A38E300BE49FC /* UIViewController+.swift in Sources */,
 				EDF32E9F270A0F9400BE49FC /* AppDelegate.swift in Sources */,
 				EDF32EC3270A19E400BE49FC /* UIColor+.swift in Sources */,
 				EDF32EC9270A244000BE49FC /* UITextField+.swift in Sources */,

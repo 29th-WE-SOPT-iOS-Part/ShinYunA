@@ -36,7 +36,7 @@ class CheckVC: UIViewController {
         setupLayout()
     }
     
-    // MARK: - Custom Method
+    // MARK: - Setup Method
     private func setupLayout() {
         view.addSubviews([logoLabel,
                          titleLabel,
