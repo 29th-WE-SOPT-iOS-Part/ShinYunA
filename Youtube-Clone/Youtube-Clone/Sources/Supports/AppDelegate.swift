@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = LoginVC()
         window.makeKeyAndVisible()
+        window.backgroundColor = .white
         self.window = window
         return true
     }

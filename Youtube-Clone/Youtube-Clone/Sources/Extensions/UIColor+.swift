@@ -26,7 +26,7 @@ extension UIColor {
     }
 }
 
-extension UIColor {
+internal extension UIColor {
     @nonobjc class var googleBlue: UIColor {
         return UIColor(rgb: 0x4285F4)
     }
