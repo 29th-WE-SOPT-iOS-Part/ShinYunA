@@ -6,7 +6,7 @@
 
 | week | content | branch | readme | assignment |
 |:------:|:------:|:------:|:------:|:------:|
-|`1주차`| iOS 컴포넌트 이해, Xcode 기본 사용법, View 화면 전환| | | |
+|`1주차`| iOS 컴포넌트 이해, Xcode 기본 사용법, View 화면 전환| feature/1st-Assignment | | |
 |`2주차`| AutoLayout, StackView, TabBarController | | | |
 |`3주차`| ScrollView, TableView, CollectionView | | | |
 |`4주차`| Cocoapods & Networking, REST API | | | |
