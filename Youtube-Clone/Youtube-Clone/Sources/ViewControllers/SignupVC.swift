@@ -32,14 +32,8 @@ class SignupVC: UIViewController {
         $0.isEnabled = true
         $0.addTarget(self, action: #selector(touchUpSignIn), for: .touchUpInside)
     }
-    private var showPasswordButton = UIButton().then {
-        var configuration = UIButton.Configuration.plain()
-        configuration.image = UIImage(systemName: "square")
-        configuration.titlePadding = 10
-        configuration.imagePadding = 10
-        configuration.baseForegroundColor = .lightGray
-        configuration.attributedTitle = AttributedString("비밀번호 표시", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
-        $0.configuration = configuration
+    private lazy var showPasswordButton = UIButton().then {
+        setupButtonState($0)
         $0.addTarget(self, action: #selector(touchUpShowPassword), for: .touchUpInside)
     }
     private lazy var loginStackView = UIStackView().then {
@@ -104,6 +98,27 @@ class SignupVC: UIViewController {
         passwordTextfield.delegate = self
     }
     
+    private func setupButtonState(_ button: UIButton) {
+        if #available(iOS 15.0, *) {
+            var configuration = UIButton.Configuration.plain()
+            configuration.image = UIImage(systemName: canShow ? "checkmark.square.fill" :  "square")
+            configuration.titlePadding = 10
+            configuration.imagePadding = 10
+            configuration.baseForegroundColor = canShow ? .googleBlue : .lightGray
+            configuration.attributedTitle = AttributedString("비밀번호 표시", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
+            button.configuration = configuration
+        } else {
+            button.setTitle("비밀번호 표시", for: .normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+            button.setTitleColor(.black, for: .normal)
+            button.setImage(UIImage(systemName: canShow ? "checkmark.square.fill" :  "square"), for: .normal)
+            button.tintColor = canShow ? .googleBlue : .lightGray
+            button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        }
+        
+        passwordTextfield.isSecureTextEntry = canShow ? false : true
+    }
+    
     // MARK: - @objc
     @objc
     private func touchUpSignIn() {
@@ -116,29 +131,8 @@ class SignupVC: UIViewController {
     
     @objc
     private func touchUpShowPassword() {
-        if !canShow {
-            var configuration = UIButton.Configuration.plain()
-            configuration.image = UIImage(systemName: "checkmark.square.fill")
-            configuration.titlePadding = 10
-            configuration.imagePadding = 10
-            configuration.baseForegroundColor = .googleBlue
-            configuration.attributedTitle = AttributedString("비밀번호 표시", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
-            showPasswordButton.configuration = configuration
-            
-            passwordTextfield.isSecureTextEntry = false
-        } else {
-            var configuration = UIButton.Configuration.plain()
-            configuration.image = UIImage(systemName: "square")
-            configuration.titlePadding = 10
-            configuration.imagePadding = 10
-            configuration.baseForegroundColor = .lightGray
-            configuration.attributedTitle = AttributedString("비밀번호 표시", attributes: AttributeContainer([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]))
-            showPasswordButton.configuration = configuration
-            
-            passwordTextfield.isSecureTextEntry = true
-        }
-        
         canShow.toggle()
+        setupButtonState(showPasswordButton)
     }
 }
 
