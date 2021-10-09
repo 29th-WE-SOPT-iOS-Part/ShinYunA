@@ -9,6 +9,7 @@ import UIKit
 
 import Then
 import SnapKit
+import Firebase
 
 class SignupVC: UIViewController {
     
@@ -90,6 +91,7 @@ class SignupVC: UIViewController {
             $0.leading.trailing.equalToSuperview().inset(30)
             $0.height.equalTo(40)
         }
+        
     }
     
     private func setupTextfield() {
@@ -122,11 +124,25 @@ class SignupVC: UIViewController {
     // MARK: - @objc
     @objc
     private func touchUpSignIn() {
-        let vc = CheckVC()
-        if let text = nameTextfield.text {
-            vc.titleLabel.text = text + "님\n환영합니다!"
+        guard let email = accountTextfield.text, !email.isEmpty,
+              let pw = passwordTextfield.text, !pw.isEmpty,
+              let name = nameTextfield.text, !name.isEmpty else {
+                  print("다 입력해주세요.")
+                  return
+              }
+        
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: pw) { (result, error) in
+            if error != nil {
+                print("회원가입 실패")
+            } else {
+                let vc = CheckVC()
+                vc.modalPresentationStyle = .fullScreen
+                if let text = self.nameTextfield.text {
+                    vc.titleLabel.text = text + "님\n환영합니다!"
+                }
+                self.present(vc, animated: true, completion: nil)
+            }
         }
-        present(vc, animated: true, completion: nil)
     }
     
     @objc

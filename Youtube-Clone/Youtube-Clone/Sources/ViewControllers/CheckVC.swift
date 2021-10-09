@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Firebase
+
 class CheckVC: UIViewController {
     
     // MARK: - UI
@@ -21,12 +23,21 @@ class CheckVC: UIViewController {
         $0.font = .boldSystemFont(ofSize: 40)
         $0.textColor = .black
     }
-    private let signinButton = UIButton().then {
+    private let checkButton = UIButton().then {
         $0.setTitle("확인", for: .normal)
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
         $0.backgroundColor = .googleBlue
         $0.layer.cornerRadius = 10
+    }
+    private let logoutButton = UIButton().then {
+        $0.setTitle("로그아웃", for: .normal)
+        $0.setTitleColor(.white, for: .normal)
+        $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        $0.backgroundColor = .googleBlue
+        $0.layer.cornerRadius = 10
+        $0.isEnabled = true
+        $0.addTarget(self, action: #selector(touchUpLogout), for: .touchUpInside)
     }
 
     // MARK: - App Cycle
@@ -40,7 +51,8 @@ class CheckVC: UIViewController {
     private func setupLayout() {
         view.addSubviews([logoLabel,
                          titleLabel,
-                         signinButton])
+                          checkButton,
+                         logoutButton])
         
         logoLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -50,10 +62,27 @@ class CheckVC: UIViewController {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(logoLabel.snp.bottom).offset(25)
         }
-        signinButton.snp.makeConstraints {
+        checkButton.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(50)
             $0.leading.trailing.equalToSuperview().inset(30)
             $0.height.equalTo(40)
+        }
+        logoutButton.snp.makeConstraints {
+            $0.top.equalTo(checkButton.snp.bottom).offset(10)
+            $0.leading.trailing.equalToSuperview().inset(30)
+            $0.height.equalTo(40)
+        }
+    }
+    
+    // MARK: - @objc
+    @objc
+    private func touchUpLogout() {
+        do {
+            try FirebaseAuth.Auth.auth().signOut()
+            print("로그아웃")
+            dismiss(animated: true, completion: nil)
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
 }
