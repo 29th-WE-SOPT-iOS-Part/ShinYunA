@@ -21,7 +21,7 @@ class CheckVC: UIViewController {
         $0.font = .boldSystemFont(ofSize: 40)
         $0.textColor = .black
     }
-    private let signinButton = UIButton().then {
+    private let checkButton = UIButton().then {
         $0.setTitle("확인", for: .normal)
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
@@ -40,7 +40,7 @@ class CheckVC: UIViewController {
     private func setupLayout() {
         view.addSubviews([logoLabel,
                          titleLabel,
-                         signinButton])
+                          checkButton])
         
         logoLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -50,7 +50,7 @@ class CheckVC: UIViewController {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(logoLabel.snp.bottom).offset(25)
         }
-        signinButton.snp.makeConstraints {
+        checkButton.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(50)
             $0.leading.trailing.equalToSuperview().inset(30)
             $0.height.equalTo(40)
