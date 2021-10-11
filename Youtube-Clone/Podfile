@@ -8,4 +8,6 @@ target 'Youtube-Clone' do
   # Pods for Youtube-Clone
   pod 'SnapKit', '~> 5.0.0'
   pod 'Then'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 end

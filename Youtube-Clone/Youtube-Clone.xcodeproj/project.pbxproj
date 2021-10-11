@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0BF0FDD2F0F8E52688A8C591 /* Pods_Youtube_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116B126FDB9241A9A4C761ED /* Pods_Youtube_Clone.framework */; };
+		EDD5FBF52711DE3100CDC4CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDD5FBF42711DE3100CDC4CB /* GoogleService-Info.plist */; };
 		EDF32E9F270A0F9400BE49FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32E9E270A0F9400BE49FC /* AppDelegate.swift */; };
 		EDF32EA9270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF32EA7270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld */; };
 		EDF32EAB270A0F9700BE49FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF32EAA270A0F9700BE49FC /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		116B126FDB9241A9A4C761ED /* Pods_Youtube_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youtube_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6361FB9BF21A793637C74691 /* Pods-Youtube-Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube-Clone.debug.xcconfig"; path = "Target Support Files/Pods-Youtube-Clone/Pods-Youtube-Clone.debug.xcconfig"; sourceTree = "<group>"; };
+		EDD5FBF42711DE3100CDC4CB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EDF32E9B270A0F9400BE49FC /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDF32E9E270A0F9400BE49FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDF32EA8270A0F9400BE49FC /* Youtube_Clone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Youtube_Clone.xcdatamodel; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		EDF32EB6270A145000BE49FC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EDD5FBF42711DE3100CDC4CB /* GoogleService-Info.plist */,
 				EDF32EAF270A0F9700BE49FC /* Info.plist */,
 				EDF32EAA270A0F9700BE49FC /* Assets.xcassets */,
 				EDF32EBD270A151800BE49FC /* Storage */,
@@ -235,6 +238,7 @@
 			files = (
 				EDF32EAE270A0F9700BE49FC /* LaunchScreen.storyboard in Resources */,
 				EDF32EAB270A0F9700BE49FC /* Assets.xcassets in Resources */,
+				EDD5FBF52711DE3100CDC4CB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +454,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tiekle.Youtube-Clone";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiekle.YoutubeClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -478,7 +482,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tiekle.Youtube-Clone";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiekle.YoutubeClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

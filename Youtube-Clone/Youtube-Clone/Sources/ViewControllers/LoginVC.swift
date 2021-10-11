@@ -9,6 +9,7 @@ import UIKit
 
 import Then
 import SnapKit
+import Firebase
 
 class LoginVC: UIViewController {
     
@@ -110,6 +111,18 @@ class LoginVC: UIViewController {
         passwordTextfield.delegate = self
     }
     
+    private func getUserProfile() {
+        if let currentEmail = FirebaseAuth.Auth.auth().currentUser?.email {
+            print("파이어베이스 로그인 성공", currentEmail)
+            let vc = CheckVC()
+            vc.modalPresentationStyle = .fullScreen
+            if let text = nameTextfield.text {
+                vc.titleLabel.text = text + "님\n환영합니다!"
+            }
+            present(vc, animated: true, completion: nil)
+        }
+    }
+    
     // MARK: - @objc
     @objc
     private func touchUpSignUp() {
@@ -119,11 +132,27 @@ class LoginVC: UIViewController {
     
     @objc
     private func touchUpSignIn() {
-        let vc = CheckVC()
-        if let text = nameTextfield.text {
-            vc.titleLabel.text = text + "님\n환영합니다!"
+        guard let email = accountTextfield.text, !email.isEmpty,
+              let pw = passwordTextfield.text, !pw.isEmpty else {
+                  print("이메일과 패스워드를 입력해주세요.")
+                  return
+              }
+        
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: pw) { [weak self] user, error in
+            guard let self = self else { return }
+            if let error = error, user == nil {
+                let alert = UIAlertController(
+                    title: "로그인 실패",
+                    message: error.localizedDescription,
+                    preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "확인", style: .default))
+                self.present(alert, animated: true, completion: nil)
+                
+            } else {
+                self.getUserProfile()
+            }
         }
-        present(vc, animated: true, completion: nil)
     }
 }
 
