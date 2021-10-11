@@ -111,7 +111,7 @@ class LoginVC: UIViewController {
         passwordTextfield.delegate = self
     }
     
-    func getUserProfile() {
+    private func getUserProfile() {
         if let currentEmail = FirebaseAuth.Auth.auth().currentUser?.email {
             print("파이어베이스 로그인 성공", currentEmail)
             let vc = CheckVC()

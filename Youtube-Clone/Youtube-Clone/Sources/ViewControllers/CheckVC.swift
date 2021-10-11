@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Then
+import SnapKit
 import Firebase
 
 class CheckVC: UIViewController {

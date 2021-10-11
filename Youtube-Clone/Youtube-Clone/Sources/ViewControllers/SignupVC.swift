@@ -155,16 +155,16 @@ class SignupVC: UIViewController {
 // MARK: - UITextFieldDelegate
 extension SignupVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let isNameEmpty = nameTextfield.text?.isEmpty,
-           let isAccountEmpty = accountTextfield.text?.isEmpty,
-           let isPasswordEmpty = passwordTextfield.text?.isEmpty {
-            if isNameEmpty || isAccountEmpty || isPasswordEmpty {
-                signinButton.isEnabled = false
-                signinButton.backgroundColor = .lightGray
-            } else {
-                signinButton.isEnabled = true
-                signinButton.backgroundColor = .googleBlue
-            }
+        let hasName = nameTextfield.hasText
+        let hasAccount = accountTextfield.hasText
+        let hasPassword = passwordTextfield.hasText
+            
+        if hasName && hasAccount && hasPassword {
+            signinButton.isEnabled = true
+            signinButton.backgroundColor = .googleBlue
+        } else {
+            signinButton.isEnabled = false
+            signinButton.backgroundColor = .lightGray
         }
     }
     
