@@ -34,6 +34,7 @@
 		EDF6245B2729D9210099176B /* ChannelCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6245A2729D9210099176B /* ChannelCVC.swift */; };
 		EDF6245D2729D9690099176B /* ToggleCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6245C2729D9690099176B /* ToggleCVC.swift */; };
 		EDF6245F2729E0300099176B /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6245E2729E0300099176B /* Channel.swift */; };
+		EDF624612729E3370099176B /* HomeTopHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF624602729E3370099176B /* HomeTopHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		EDF6245A2729D9210099176B /* ChannelCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCVC.swift; sourceTree = "<group>"; };
 		EDF6245C2729D9690099176B /* ToggleCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleCVC.swift; sourceTree = "<group>"; };
 		EDF6245E2729E0300099176B /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		EDF624602729E3370099176B /* HomeTopHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopHeader.swift; sourceTree = "<group>"; };
 		F25B8480B7A2E84F5C29634D /* Pods-Youtube-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube-Clone.release.xcconfig"; path = "Target Support Files/Pods-Youtube-Clone/Pods-Youtube-Clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,8 +256,8 @@
 		EDF6244F2729C6270099176B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				EDF32EC6270A1FA500BE49FC /* LoginTextField.swift */,
-				EDF624582729D63E0099176B /* HomeHeaderView.swift */,
+				EDF624632729E3420099176B /* Home */,
+				EDF624622729E33B0099176B /* Login */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -277,6 +279,23 @@
 				EDF6245E2729E0300099176B /* Channel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EDF624622729E33B0099176B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EDF32EC6270A1FA500BE49FC /* LoginTextField.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EDF624632729E3420099176B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EDF624582729D63E0099176B /* HomeHeaderView.swift */,
+				EDF624602729E3370099176B /* HomeTopHeader.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +432,7 @@
 				EDF32EA9270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld in Sources */,
 				EDF624552729CC420099176B /* Thumbnail.swift in Sources */,
 				EDF624592729D63E0099176B /* HomeHeaderView.swift in Sources */,
+				EDF624612729E3370099176B /* HomeTopHeader.swift in Sources */,
 				EDF6245F2729E0300099176B /* Channel.swift in Sources */,
 				EDF32EC5270A1DDC00BE49FC /* UIView+.swift in Sources */,
 				EDF624522729C6DC0099176B /* ThumbnailTVC.swift in Sources */,

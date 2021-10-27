@@ -17,11 +17,15 @@ class HomeVC: UIViewController {
         $0.dataSource = self
         $0.delegate = self
         $0.estimatedRowHeight = 100
+        $0.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
         $0.register(ThumbnailTVC.self, forCellReuseIdentifier: ThumbnailTVC.identifier)
         
         if #available(iOS 15.0, *) {
             $0.sectionHeaderTopPadding = 0
         }
+    }
+    private let topHeader = HomeTopHeader().then {
+        $0.backgroundColor = .white
     }
     
     // MARK: - Properties
@@ -36,10 +40,15 @@ class HomeVC: UIViewController {
     
     // MARK: - Setup Method
     private func setupLayout() {
-        view.addSubviews([tableView])
+        view.addSubviews([tableView,
+                          topHeader])
         
         tableView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        topHeader.snp.makeConstraints {
+            $0.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
