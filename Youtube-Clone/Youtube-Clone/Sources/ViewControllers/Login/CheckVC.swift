@@ -9,7 +9,6 @@ import UIKit
 
 import Then
 import SnapKit
-import Firebase
 
 class CheckVC: UIViewController {
     
@@ -39,6 +38,9 @@ class CheckVC: UIViewController {
         $0.titleLabel?.font = .systemFont(ofSize: 15)
         $0.addTarget(self, action: #selector(touchUpLogout), for: .touchUpInside)
     }
+    
+    // MARK: - Properties
+    private let manager = LoginManager.shared
 
     // MARK: - App Cycle
     override func viewDidLoad() {
@@ -76,16 +78,13 @@ class CheckVC: UIViewController {
     // MARK: - @objc
     @objc
     private func touchUpLogout() {
-        do {
-            try FirebaseAuth.Auth.auth().signOut()
-            print("로그아웃")
-            
+        let status = manager.fetchLogout()
+        
+        if status {
             guard let presentingVC = presentingViewController as? UINavigationController else { return }
             dismiss(animated: true) {
                 presentingVC.popToRootViewController(animated: false)
             }
-        } catch let error {
-            print(error.localizedDescription)
         }
     }
     

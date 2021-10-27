@@ -9,7 +9,6 @@ import UIKit
 
 import Then
 import SnapKit
-import Firebase
 
 class LockerVC: UIViewController {
     
@@ -20,7 +19,11 @@ class LockerVC: UIViewController {
         $0.titleLabel?.font = .systemFont(ofSize: 15)
         $0.addTarget(self, action: #selector(touchUpLogout), for: .touchUpInside)
     }
-
+    
+    // MARK: - Properties
+    private let manager = LoginManager.shared
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
@@ -38,13 +41,6 @@ class LockerVC: UIViewController {
     // MARK: - @objc
     @objc
     private func touchUpLogout() {
-        do {
-            try FirebaseAuth.Auth.auth().signOut()
-            print("로그아웃")
-            
-            Login.shared.setLoginOut()
-        } catch let error {
-            print(error.localizedDescription)
-        }
+        manager.fetchMainLogout()
     }
 }

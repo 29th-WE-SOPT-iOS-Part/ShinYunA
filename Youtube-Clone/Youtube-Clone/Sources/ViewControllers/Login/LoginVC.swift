@@ -9,7 +9,6 @@ import UIKit
 
 import Then
 import SnapKit
-import Firebase
 
 class LoginVC: UIViewController {
     
@@ -60,6 +59,9 @@ class LoginVC: UIViewController {
     private let accountTextfield = LoginTextField(placeholder: "이메일 또는 휴대전화")
     private let passwordTextfield = LoginTextField(placeholder: "비밀번호 입력", isSecureTextEntry: true)
 
+    // MARK: - Properties
+    private let manager = LoginManager.shared
+    
     // MARK: - App Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,17 +114,22 @@ class LoginVC: UIViewController {
     }
     
     private func getUserProfile() {
-        if let currentEmail = FirebaseAuth.Auth.auth().currentUser?.email {
-            print("파이어베이스 로그인 성공", currentEmail)
-            Login.shared.setLogin()
-            
-            let vc = CheckVC()
-            vc.modalPresentationStyle = .fullScreen
-            if let text = nameTextfield.text {
-                vc.titleLabel.text = text + "님\n환영합니다!"
-            }
-            present(vc, animated: true, completion: nil)
+        let vc = CheckVC()
+        vc.modalPresentationStyle = .fullScreen
+        if let text = nameTextfield.text {
+            vc.titleLabel.text = text + "님\n환영합니다!"
         }
+        present(vc, animated: true, completion: nil)
+    }
+    
+    private func getAlertController() {
+        let alert = UIAlertController(
+            title: "로그인 실패",
+            message: "로그인에 실패하셨습니다. 다시 입력해주세요",
+            preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: - @objc
@@ -140,19 +147,11 @@ class LoginVC: UIViewController {
                   return
               }
         
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: pw) { [weak self] user, error in
-            guard let self = self else { return }
-            if let error = error, user == nil {
-                let alert = UIAlertController(
-                    title: "로그인 실패",
-                    message: error.localizedDescription,
-                    preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "확인", style: .default))
-                self.present(alert, animated: true, completion: nil)
-                
-            } else {
+        manager.dispatchLogin(email: email, pw: pw) { result in
+            if result {
                 self.getUserProfile()
+            } else {
+                self.getAlertController()
             }
         }
     }

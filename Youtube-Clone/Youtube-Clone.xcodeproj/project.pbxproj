@@ -125,7 +125,7 @@
 		EDF32EB7270A145B00BE49FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EDF6243F272980B30099176B /* Services */,
+				EDF6243F272980B30099176B /* Managers */,
 				EDF32EBB270A14EE00BE49FC /* Supports */,
 				EDF32EB9270A146C00BE49FC /* Extensions */,
 				EDF32EBA270A147400BE49FC /* Views */,
@@ -207,12 +207,12 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		EDF6243F272980B30099176B /* Services */ = {
+		EDF6243F272980B30099176B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				EDF62442272981090099176B /* LoginManager.swift */,
 			);
-			path = Services;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

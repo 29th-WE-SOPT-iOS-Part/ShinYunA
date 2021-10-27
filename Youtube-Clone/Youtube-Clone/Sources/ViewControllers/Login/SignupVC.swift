@@ -9,7 +9,6 @@ import UIKit
 
 import Then
 import SnapKit
-import Firebase
 
 class SignupVC: UIViewController {
     
@@ -52,6 +51,7 @@ class SignupVC: UIViewController {
     
     // MARK: - Properties
     private var canShow = false
+    private let manager = LoginManager.shared
 
     // MARK: - App Cycle
     override func viewDidLoad() {
@@ -120,6 +120,25 @@ class SignupVC: UIViewController {
         passwordTextfield.isSecureTextEntry = canShow ? false : true
     }
     
+    private func getUserProfile() {
+        let vc = CheckVC()
+        vc.modalPresentationStyle = .fullScreen
+        if let text = self.nameTextfield.text {
+            vc.titleLabel.text = text + "님\n환영합니다!"
+        }
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    private func getAlertController() {
+        let alert = UIAlertController(
+            title: "회원가입 실패",
+            message: "회원가입에 실패하셨습니다. 이메일, 비밀번호를 다시 확인해주세요.",
+            preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: - @objc
     @objc
     private func touchUpSignIn() {
@@ -130,18 +149,11 @@ class SignupVC: UIViewController {
                   return
               }
         
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: pw) { (result, error) in
-            if error != nil {
-                print("회원가입 실패")
+        manager.dispatchSignUp(email: email, pw: pw) { result in
+            if result {
+                self.getUserProfile()
             } else {
-                Login.shared.setLogin()
-                
-                let vc = CheckVC()
-                vc.modalPresentationStyle = .fullScreen
-                if let text = self.nameTextfield.text {
-                    vc.titleLabel.text = text + "님\n환영합니다!"
-                }
-                self.present(vc, animated: true, completion: nil)
+                self.getAlertController()
             }
         }
     }
