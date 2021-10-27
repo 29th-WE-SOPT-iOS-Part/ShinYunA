@@ -23,6 +23,8 @@
 		EDF32ECF270A38E300BE49FC /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF32ECE270A38E300BE49FC /* UIViewController+.swift */; };
 		EDF624252729727E0099176B /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF624242729727E0099176B /* TabbarController.swift */; };
 		EDF624272729729A0099176B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF624262729729A0099176B /* HomeVC.swift */; };
+		EDF62443272981090099176B /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62442272981090099176B /* LoginManager.swift */; };
+		EDF62445272981A00099176B /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62444272981A00099176B /* UIWindow+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		EDF32ECE270A38E300BE49FC /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		EDF624242729727E0099176B /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		EDF624262729729A0099176B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		EDF62442272981090099176B /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		EDF62444272981A00099176B /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 		F25B8480B7A2E84F5C29634D /* Pods-Youtube-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube-Clone.release.xcconfig"; path = "Target Support Files/Pods-Youtube-Clone/Pods-Youtube-Clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +123,7 @@
 		EDF32EB7270A145B00BE49FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EDF6243F272980B30099176B /* Services */,
 				EDF32EBB270A14EE00BE49FC /* Supports */,
 				EDF32EB9270A146C00BE49FC /* Extensions */,
 				EDF32EBA270A147400BE49FC /* Views */,
@@ -143,6 +148,7 @@
 				EDF32EC4270A1DDC00BE49FC /* UIView+.swift */,
 				EDF32EC8270A244000BE49FC /* UITextField+.swift */,
 				EDF32ECE270A38E300BE49FC /* UIViewController+.swift */,
+				EDF62444272981A00099176B /* UIWindow+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -196,6 +202,14 @@
 				EDF624242729727E0099176B /* TabbarController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		EDF6243F272980B30099176B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EDF62442272981090099176B /* LoginManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDF32ECD270A2ED500BE49FC /* CheckVC.swift in Sources */,
+				EDF62445272981A00099176B /* UIWindow+.swift in Sources */,
 				EDF32ECB270A283F00BE49FC /* SignupVC.swift in Sources */,
 				EDF32ECF270A38E300BE49FC /* UIViewController+.swift in Sources */,
 				EDF32E9F270A0F9400BE49FC /* AppDelegate.swift in Sources */,
@@ -321,6 +336,7 @@
 				EDF32EC9270A244000BE49FC /* UITextField+.swift in Sources */,
 				EDF32EC1270A15C200BE49FC /* LoginVC.swift in Sources */,
 				EDF624252729727E0099176B /* TabbarController.swift in Sources */,
+				EDF62443272981090099176B /* LoginManager.swift in Sources */,
 				EDF32EC7270A1FA500BE49FC /* LoginTextField.swift in Sources */,
 				EDF624272729729A0099176B /* HomeVC.swift in Sources */,
 				EDF32EA9270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld in Sources */,

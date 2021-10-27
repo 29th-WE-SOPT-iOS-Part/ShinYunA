@@ -134,6 +134,8 @@ class SignupVC: UIViewController {
             if error != nil {
                 print("회원가입 실패")
             } else {
+                Login.shared.setLogin()
+                
                 let vc = CheckVC()
                 vc.modalPresentationStyle = .fullScreen
                 if let text = self.nameTextfield.text {

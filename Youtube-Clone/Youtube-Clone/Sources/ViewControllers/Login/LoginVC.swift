@@ -114,6 +114,8 @@ class LoginVC: UIViewController {
     private func getUserProfile() {
         if let currentEmail = FirebaseAuth.Auth.auth().currentUser?.email {
             print("파이어베이스 로그인 성공", currentEmail)
+            Login.shared.setLogin()
+            
             let vc = CheckVC()
             vc.modalPresentationStyle = .fullScreen
             if let text = nameTextfield.text {
