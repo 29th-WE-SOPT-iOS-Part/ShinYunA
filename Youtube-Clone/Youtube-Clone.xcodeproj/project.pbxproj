@@ -26,6 +26,7 @@
 		EDF62443272981090099176B /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62442272981090099176B /* LoginManager.swift */; };
 		EDF62445272981A00099176B /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62444272981A00099176B /* UIWindow+.swift */; };
 		EDF624482729830F0099176B /* LockerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF624472729830F0099176B /* LockerVC.swift */; };
+		EDF6244E2729C1600099176B /* YoutubeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6244D2729C1600099176B /* YoutubeIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		EDF62442272981090099176B /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		EDF62444272981A00099176B /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 		EDF624472729830F0099176B /* LockerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerVC.swift; sourceTree = "<group>"; };
+		EDF6244D2729C1600099176B /* YoutubeIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeIcon.swift; sourceTree = "<group>"; };
 		F25B8480B7A2E84F5C29634D /* Pods-Youtube-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube-Clone.release.xcconfig"; path = "Target Support Files/Pods-Youtube-Clone/Pods-Youtube-Clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,9 +127,9 @@
 		EDF32EB7270A145B00BE49FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EDF6244B2729C1280099176B /* Application */,
 				EDF6243F272980B30099176B /* Managers */,
 				EDF32EBB270A14EE00BE49FC /* Supports */,
-				EDF32EB9270A146C00BE49FC /* Extensions */,
 				EDF32EBA270A147400BE49FC /* Views */,
 				EDF32EB8270A146500BE49FC /* ViewControllers */,
 			);
@@ -166,7 +168,8 @@
 		EDF32EBB270A14EE00BE49FC /* Supports */ = {
 			isa = PBXGroup;
 			children = (
-				EDF32E9E270A0F9400BE49FC /* AppDelegate.swift */,
+				EDF6244C2729C1480099176B /* Foundations */,
+				EDF32EB9270A146C00BE49FC /* Extensions */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -213,6 +216,22 @@
 				EDF62442272981090099176B /* LoginManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		EDF6244B2729C1280099176B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EDF32E9E270A0F9400BE49FC /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EDF6244C2729C1480099176B /* Foundations */ = {
+			isa = PBXGroup;
+			children = (
+				EDF6244D2729C1600099176B /* YoutubeIcon.swift */,
+			);
+			path = Foundations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +351,7 @@
 			files = (
 				EDF32ECD270A2ED500BE49FC /* CheckVC.swift in Sources */,
 				EDF62445272981A00099176B /* UIWindow+.swift in Sources */,
+				EDF6244E2729C1600099176B /* YoutubeIcon.swift in Sources */,
 				EDF32ECB270A283F00BE49FC /* SignupVC.swift in Sources */,
 				EDF32ECF270A38E300BE49FC /* UIViewController+.swift in Sources */,
 				EDF32E9F270A0F9400BE49FC /* AppDelegate.swift in Sources */,
