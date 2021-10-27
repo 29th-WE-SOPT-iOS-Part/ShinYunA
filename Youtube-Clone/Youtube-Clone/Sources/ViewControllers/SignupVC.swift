@@ -91,7 +91,6 @@ class SignupVC: UIViewController {
             $0.leading.trailing.equalToSuperview().inset(30)
             $0.height.equalTo(40)
         }
-        
     }
     
     private func setupTextfield() {
