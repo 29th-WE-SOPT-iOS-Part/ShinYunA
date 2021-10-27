@@ -33,7 +33,7 @@ class ThumbnailTVC: UITableViewCell {
     }
     
     // MARK: - Properties
-    private let manager = ThumbnailManager.shared
+    private let manager = HomeManager.shared
 
     // MARK: - Initalizing
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

@@ -25,7 +25,7 @@ class HomeVC: UIViewController {
     }
     
     // MARK: - Properties
-    private let thumbnailMG = ThumbnailManager.shared
+    private let thumbnailMG = HomeManager.shared
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -67,12 +67,16 @@ extension HomeVC: UITableViewDelegate {
         return UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "hi"
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return HomeHeaderView()
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
