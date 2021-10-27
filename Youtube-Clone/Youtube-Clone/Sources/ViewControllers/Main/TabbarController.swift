@@ -12,33 +12,31 @@ class TabbarController: UITabBarController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configUI()
+        configUI()
         setupTabs()
     }
     
     // MARK: - Custom Method
     private func configUI() {
-        UITabBar.appearance().shadowImage = UIImage()
-        UITabBar.appearance().backgroundImage = UIImage()
-        UITabBar.appearance().backgroundColor = UIColor.secondarySystemBackground
-        UITabBar.appearance().tintColor = .systemGreen
+        UITabBar.appearance().tintColor = .black
+        UITabBar.appearance().unselectedItemTintColor = .lightGray
     }
     
     private func setupTabs(){
         let homeTab = HomeVC()
-        homeTab.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house.fill"), tag: 0)
+        homeTab.tabBarItem = UITabBarItem(title: "홈", image: UIImage(named: "homeIconFill"), tag: 0)
         
         let shortTab = HomeVC()
-        shortTab.tabBarItem = UITabBarItem(title: "Shorts", image: UIImage(systemName: "creditcard.fill"), tag: 1)
+        shortTab.tabBarItem = UITabBarItem(title: "Shorts", image: UIImage(named: "shortsIconFill"), tag: 1)
         
         let addTab = HomeVC()
-        addTab.tabBarItem = UITabBarItem(title: "추가", image: UIImage(systemName: "arrow.up.bin.fill"), tag: 2)
+        addTab.tabBarItem = UITabBarItem(title: "추가", image: UIImage(named: "plueCircleIcon"), tag: 2)
         
         let subscribeTab = HomeVC()
-        subscribeTab.tabBarItem = UITabBarItem(title: "구독", image: UIImage(systemName: "gift.fill"), tag: 3)
+        subscribeTab.tabBarItem = UITabBarItem(title: "구독", image: UIImage(named: "subscriptionsIcon"), selectedImage: UIImage(named: "subscriptionsIconFill"))
 
         let lockerTab = HomeVC()
-        lockerTab.tabBarItem = UITabBarItem(title: "보관함", image: UIImage(named: "detailTabIconSelected"), tag: 4)
+        lockerTab.tabBarItem = UITabBarItem(title: "보관함", image: UIImage(named: "LibraryIcon"), selectedImage: UIImage(named: "LibraryIconFill"))
         
         let tabs =  [homeTab, shortTab, addTab, subscribeTab, lockerTab]
         
