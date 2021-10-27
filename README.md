@@ -6,7 +6,7 @@
 
 | week | content | branch | PR | assignment |
 |:------:|:------:|:------:|:------:|------|
-|`1주차`| iOS 컴포넌트 이해, Xcode 기본 사용법, View 화면 전환| [`feature/1st-Assignment`](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/tree/feature/1st-Assignment) | [`PR`](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/pull/5)  | [💐 Basic](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/blob/feature/second-seminar/README/Assignment1-Basic.md) <br/> [✈️ Advanced](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/blob/feature/second-seminar/README/Assignment1-Advanced.md) |
+|`1주차`| iOS 컴포넌트 이해, Xcode 기본 사용법, View 화면 전환| [`feature/1st-Assignment`](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/tree/feature/1st-Assignment) | [`PR`](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/pull/5)  | [Basic](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/blob/feature/second-seminar/README/Assignment1-Basic.md) <br/> [Advanced](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/blob/feature/second-seminar/README/Assignment1-Advanced.md) |
 |`2주차`| AutoLayout, StackView, TabBarController | [`feature/2nd-Assignment`](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/tree/feature/2nd-Assignment)| | |
 |`3주차`| ScrollView, TableView, CollectionView | | | |
 |`4주차`| Cocoapods & Networking, REST API | | | |
