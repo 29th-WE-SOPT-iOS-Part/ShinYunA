@@ -30,6 +30,7 @@ class HomeVC: UIViewController {
     
     // MARK: - Properties
     private let thumbnailMG = HomeManager.shared
+    private var scrollingUp = false
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -49,6 +50,8 @@ class HomeVC: UIViewController {
         
         topHeader.snp.makeConstraints {
             $0.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            $0.width.equalTo(UIScreen.main.bounds.size.width)
+            $0.height.equalTo(44)
         }
     }
     
@@ -90,5 +93,29 @@ extension HomeVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
+    }
+}
+
+// MARK: - ScrollDelegate
+extension HomeVC {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y
+        
+        if offset > 115, !scrollingUp {
+            topHeader.transform = CGAffineTransform(translationX: 0, y: -(offset/10))
+            topHeader.alpha = 1.0 - (offset/150)
+        } else {
+            topHeader.transform = .identity
+            topHeader.alpha = 1.0
+        }
+    }
+    
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        let actualPosition = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
+            if actualPosition.y > 0 {
+                scrollingUp = true
+            } else {
+                scrollingUp = false
+            }
     }
 }
