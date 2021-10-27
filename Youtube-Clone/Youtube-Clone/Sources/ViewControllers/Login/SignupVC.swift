@@ -13,10 +13,8 @@ import SnapKit
 class SignupVC: UIViewController {
     
     // MARK: - UI
-    private let logoLabel = UILabel().then {
-        $0.text = "Google"
-        $0.font = .boldSystemFont(ofSize: 40)
-        $0.textColor = .black
+    private let logoImage = UIImageView().then {
+        $0.image = YoutubeIcon.logo
     }
     private let titleLabel = UILabel().then {
         $0.text = "회원가입"
@@ -64,19 +62,19 @@ class SignupVC: UIViewController {
     
     // MARK: - Setup Method
     private func setupLayout() {
-        view.addSubviews([logoLabel,
+        view.addSubviews([logoImage,
                          titleLabel,
                          loginStackView,
                          showPasswordButton,
                          signinButton])
         
-        logoLabel.snp.makeConstraints {
+        logoImage.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(view.safeAreaLayoutGuide).inset(30)
         }
         titleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(logoLabel.snp.bottom).offset(15)
+            $0.top.equalTo(logoImage.snp.bottom).offset(15)
         }
         loginStackView.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(110)

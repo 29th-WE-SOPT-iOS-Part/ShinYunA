@@ -8,6 +8,7 @@
 import UIKit
 
 public enum YoutubeIcon {
+    public static var logo: UIImage { .load(name: "logo")}
     public static var ggamju1: UIImage { .load(name: "ggamju1")}
     public static var ggamju2: UIImage { .load(name: "ggamju2")}
     public static var ggamju3: UIImage { .load(name: "ggamju3")}

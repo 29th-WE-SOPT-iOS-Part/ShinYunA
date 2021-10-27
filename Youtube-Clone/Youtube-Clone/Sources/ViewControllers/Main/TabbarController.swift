@@ -24,19 +24,19 @@ class TabbarController: UITabBarController {
     
     private func setupTabs(){
         let homeTab = HomeVC()
-        homeTab.tabBarItem = UITabBarItem(title: "홈", image: UIImage(named: "homeIconFill"), tag: 0)
+        homeTab.tabBarItem = UITabBarItem(title: "홈", image: YoutubeIcon.homeIconFill, tag: 0)
         
         let shortTab = HomeVC()
-        shortTab.tabBarItem = UITabBarItem(title: "Shorts", image: UIImage(named: "shortsIconFill"), tag: 1)
+        shortTab.tabBarItem = UITabBarItem(title: "Shorts", image: YoutubeIcon.shortsIconFill, tag: 1)
         
         let addTab = HomeVC()
-        addTab.tabBarItem = UITabBarItem(title: "추가", image: UIImage(named: "plueCircleIcon"), tag: 2)
+        addTab.tabBarItem = UITabBarItem(title: "추가", image: YoutubeIcon.plueCircleIcon, tag: 2)
         
         let subscribeTab = HomeVC()
-        subscribeTab.tabBarItem = UITabBarItem(title: "구독", image: UIImage(named: "subscriptionsIcon"), selectedImage: UIImage(named: "subscriptionsIconFill"))
+        subscribeTab.tabBarItem = UITabBarItem(title: "구독", image: YoutubeIcon.subscriptionsIcon, selectedImage: YoutubeIcon.subscriptionsIconFill)
 
         let lockerTab = LockerVC()
-        lockerTab.tabBarItem = UITabBarItem(title: "보관함", image: UIImage(named: "LibraryIcon"), selectedImage: UIImage(named: "LibraryIconFill"))
+        lockerTab.tabBarItem = UITabBarItem(title: "보관함", image: YoutubeIcon.LibraryIcon, selectedImage: YoutubeIcon.LibraryIconFill)
         
         let tabs =  [homeTab, shortTab, addTab, subscribeTab, lockerTab]
         
