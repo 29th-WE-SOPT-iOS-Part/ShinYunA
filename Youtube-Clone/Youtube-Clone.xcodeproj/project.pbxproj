@@ -25,6 +25,7 @@
 		EDF624272729729A0099176B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF624262729729A0099176B /* HomeVC.swift */; };
 		EDF62443272981090099176B /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62442272981090099176B /* LoginManager.swift */; };
 		EDF62445272981A00099176B /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62444272981A00099176B /* UIWindow+.swift */; };
+		EDF624482729830F0099176B /* LockerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF624472729830F0099176B /* LockerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		EDF624262729729A0099176B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EDF62442272981090099176B /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		EDF62444272981A00099176B /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
+		EDF624472729830F0099176B /* LockerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerVC.swift; sourceTree = "<group>"; };
 		F25B8480B7A2E84F5C29634D /* Pods-Youtube-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube-Clone.release.xcconfig"; path = "Target Support Files/Pods-Youtube-Clone/Pods-Youtube-Clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 		EDF62429272972A50099176B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				EDF624472729830F0099176B /* LockerVC.swift */,
 				EDF624262729729A0099176B /* HomeVC.swift */,
 				EDF624242729727E0099176B /* TabbarController.swift */,
 			);
@@ -341,6 +344,7 @@
 				EDF624272729729A0099176B /* HomeVC.swift in Sources */,
 				EDF32EA9270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld in Sources */,
 				EDF32EC5270A1DDC00BE49FC /* UIView+.swift in Sources */,
+				EDF624482729830F0099176B /* LockerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

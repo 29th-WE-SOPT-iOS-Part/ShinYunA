@@ -35,7 +35,7 @@ class TabbarController: UITabBarController {
         let subscribeTab = HomeVC()
         subscribeTab.tabBarItem = UITabBarItem(title: "구독", image: UIImage(named: "subscriptionsIcon"), selectedImage: UIImage(named: "subscriptionsIconFill"))
 
-        let lockerTab = HomeVC()
+        let lockerTab = LockerVC()
         lockerTab.tabBarItem = UITabBarItem(title: "보관함", image: UIImage(named: "LibraryIcon"), selectedImage: UIImage(named: "LibraryIconFill"))
         
         let tabs =  [homeTab, shortTab, addTab, subscribeTab, lockerTab]
