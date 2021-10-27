@@ -44,7 +44,7 @@ class LoginVC: UIViewController {
         $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
         $0.backgroundColor = .lightGray
         $0.layer.cornerRadius = 10
-        $0.isEnabled = true
+        $0.isEnabled = false
         $0.addTarget(self, action: #selector(touchUpSignIn), for: .touchUpInside)
     }
     private lazy var loginStackView = UIStackView().then {
@@ -159,16 +159,16 @@ class LoginVC: UIViewController {
 // MARK: - UITextFieldDelegate
 extension LoginVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let isNameEmpty = nameTextfield.text?.isEmpty,
-           let isAccountEmpty = accountTextfield.text?.isEmpty,
-           let isPasswordEmpty = passwordTextfield.text?.isEmpty {
-            if isNameEmpty || isAccountEmpty || isPasswordEmpty {
-                signinButton.isEnabled = false
-                signinButton.backgroundColor = .lightGray
-            } else {
-                signinButton.isEnabled = true
-                signinButton.backgroundColor = .googleBlue
-            }
+        let isNameEmpty = nameTextfield.hasText
+        let isAccountEmpty = accountTextfield.hasText
+        let isPasswordEmpty = passwordTextfield.hasText
+        
+        if isNameEmpty && isAccountEmpty && isPasswordEmpty {
+            signinButton.isEnabled = true
+            signinButton.backgroundColor = .googleBlue
+        } else {
+            signinButton.isEnabled = true
+            signinButton.backgroundColor = .lightGray
         }
     }
     

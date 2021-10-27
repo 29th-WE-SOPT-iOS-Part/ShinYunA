@@ -30,7 +30,7 @@ class SignupVC: UIViewController {
         $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
         $0.backgroundColor = .lightGray
         $0.layer.cornerRadius = 10
-        $0.isEnabled = true
+        $0.isEnabled = false
         $0.addTarget(self, action: #selector(touchUpSignIn), for: .touchUpInside)
     }
     private lazy var showPasswordButton = UIButton().then {
