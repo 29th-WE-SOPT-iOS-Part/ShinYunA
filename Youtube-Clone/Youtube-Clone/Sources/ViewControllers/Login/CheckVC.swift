@@ -31,6 +31,7 @@ class CheckVC: UIViewController {
         $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
         $0.backgroundColor = .googleBlue
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(touchUpConfirm), for: .touchUpInside)
     }
     private let logoutButton = UIButton().then {
         $0.setTitle("다른 계정으로 로그인하기", for: .normal)
@@ -86,5 +87,12 @@ class CheckVC: UIViewController {
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+    
+    @objc
+    private func touchUpConfirm() {
+        let mainTabbar = TabbarController()
+        mainTabbar.modalPresentationStyle = .fullScreen
+        present(mainTabbar, animated: true, completion: nil)
     }
 }
