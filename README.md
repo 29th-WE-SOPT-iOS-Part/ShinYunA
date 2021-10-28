@@ -8,7 +8,7 @@
 |:------:|:------:|:------:|:------:|------|
 |`1주차`| iOS 컴포넌트 이해, Xcode 기본 사용법, View 화면 전환| [`feature/1st-Assignment`](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/tree/feature/1st-Assignment) | [`PR`](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/pull/5)  | [Basic](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/blob/feature/second-seminar/README/Assignment1-Basic.md) <br/> [Advanced](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/blob/feature/second-seminar/README/Assignment1-Advanced.md) |
 |`2주차`| AutoLayout, StackView, TabBarController | [`feature/2nd-Assignment`](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/tree/feature/2nd-Assignment)| [`PR`](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/pull/11) | [Basic](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/blob/feature/2nd-Assignment/README/Assignment2.md) |
-|`3주차`| ScrollView, TableView, CollectionView | [`feature/3rd-Assignment`](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/tree/feature/3rd-Assignment)| | |
+|`3주차`| ScrollView, TableView, CollectionView | [`feature/3rd-Assignment`](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/tree/feature/3rd-Assignment)| [`PR`](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/pull/14) | [Basic](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/blob/feature/3rd-Assignment/README/Assignment3-Basic.md) <br/> [Advanced](https://github.com/29th-WE-SOPT-iOS-Part/ShinYunA/blob/feature/3rd-Assignment/README/Assignment3-Advanced.md) |
 |`4주차`| Cocoapods & Networking, REST API | | | |
 |`5주차`| 디자인 합동 세미나 | | | |
 |`6주차`| 서버 합동 세미나 + 솝커톤 | | | |
