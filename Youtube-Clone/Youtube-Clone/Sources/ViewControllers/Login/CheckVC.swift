@@ -9,7 +9,6 @@ import UIKit
 
 import Then
 import SnapKit
-import Firebase
 
 class CheckVC: UIViewController {
     
@@ -20,10 +19,8 @@ class CheckVC: UIViewController {
         $0.numberOfLines = 2
         $0.textAlignment = .center
     }
-    private let logoLabel = UILabel().then {
-        $0.text = "Google"
-        $0.font = .boldSystemFont(ofSize: 40)
-        $0.textColor = .black
+    private let logoImage = UIImageView().then {
+        $0.image = YoutubeIcon.logo
     }
     private let checkButton = UIButton().then {
         $0.setTitle("확인", for: .normal)
@@ -39,6 +36,9 @@ class CheckVC: UIViewController {
         $0.titleLabel?.font = .systemFont(ofSize: 15)
         $0.addTarget(self, action: #selector(touchUpLogout), for: .touchUpInside)
     }
+    
+    // MARK: - Properties
+    private let manager = LoginManager.shared
 
     // MARK: - App Cycle
     override func viewDidLoad() {
@@ -49,18 +49,18 @@ class CheckVC: UIViewController {
     
     // MARK: - Setup Method
     private func setupLayout() {
-        view.addSubviews([logoLabel,
+        view.addSubviews([logoImage,
                          titleLabel,
                           checkButton,
                          logoutButton])
         
-        logoLabel.snp.makeConstraints {
+        logoImage.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(view.safeAreaLayoutGuide).inset(180)
         }
         titleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(logoLabel.snp.bottom).offset(25)
+            $0.top.equalTo(logoImage.snp.bottom).offset(25)
         }
         checkButton.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(50)
@@ -76,16 +76,13 @@ class CheckVC: UIViewController {
     // MARK: - @objc
     @objc
     private func touchUpLogout() {
-        do {
-            try FirebaseAuth.Auth.auth().signOut()
-            print("로그아웃")
-            
+        let status = manager.fetchLogout()
+        
+        if status {
             guard let presentingVC = presentingViewController as? UINavigationController else { return }
             dismiss(animated: true) {
                 presentingVC.popToRootViewController(animated: false)
             }
-        } catch let error {
-            print(error.localizedDescription)
         }
     }
     

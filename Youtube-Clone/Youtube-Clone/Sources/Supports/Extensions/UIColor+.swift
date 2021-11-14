@@ -30,4 +30,16 @@ internal extension UIColor {
     @nonobjc class var googleBlue: UIColor {
         return UIColor(rgb: 0x4285F4)
     }
+    
+    @nonobjc class var subGray: UIColor {
+        return UIColor(rgb: 0x606060)
+    }
+    
+    @nonobjc class var subGray100: UIColor {
+        return UIColor(rgb: 0xF2F2F2)
+    }
+    
+    @nonobjc class var subGray200: UIColor {
+        return UIColor(rgb: 0xDADADA)
+    }
 }

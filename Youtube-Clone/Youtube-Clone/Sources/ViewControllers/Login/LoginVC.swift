@@ -9,15 +9,12 @@ import UIKit
 
 import Then
 import SnapKit
-import Firebase
 
 class LoginVC: UIViewController {
     
     // MARK: - UI
-    private let logoLabel = UILabel().then {
-        $0.text = "Google"
-        $0.font = .boldSystemFont(ofSize: 40)
-        $0.textColor = .black
+    private let logoImage = UIImageView().then {
+        $0.image = YoutubeIcon.logo
     }
     private let titleLabel = UILabel().then {
         $0.text = "로그인"
@@ -60,6 +57,9 @@ class LoginVC: UIViewController {
     private let accountTextfield = LoginTextField(placeholder: "이메일 또는 휴대전화")
     private let passwordTextfield = LoginTextField(placeholder: "비밀번호 입력", isSecureTextEntry: true)
 
+    // MARK: - Properties
+    private let manager = LoginManager.shared
+    
     // MARK: - App Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,20 +70,20 @@ class LoginVC: UIViewController {
     
     // MARK: - Setup Method
     private func setupLayout() {
-        view.addSubviews([logoLabel,
+        view.addSubviews([logoImage,
                          titleLabel,
                          infoLabel,
                          loginStackView,
                          signupButton,
                          signinButton])
         
-        logoLabel.snp.makeConstraints {
+        logoImage.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(view.safeAreaLayoutGuide).inset(30)
         }
         titleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(logoLabel.snp.bottom).offset(15)
+            $0.top.equalTo(logoImage.snp.bottom).offset(15)
         }
         infoLabel.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(40)
@@ -112,17 +112,22 @@ class LoginVC: UIViewController {
     }
     
     private func getUserProfile() {
-        if let currentEmail = FirebaseAuth.Auth.auth().currentUser?.email {
-            print("파이어베이스 로그인 성공", currentEmail)
-            Login.shared.setLogin()
-            
-            let vc = CheckVC()
-            vc.modalPresentationStyle = .fullScreen
-            if let text = nameTextfield.text {
-                vc.titleLabel.text = text + "님\n환영합니다!"
-            }
-            present(vc, animated: true, completion: nil)
+        let vc = CheckVC()
+        vc.modalPresentationStyle = .fullScreen
+        if let text = nameTextfield.text {
+            vc.titleLabel.text = text + "님\n환영합니다!"
         }
+        present(vc, animated: true, completion: nil)
+    }
+    
+    private func getAlertController() {
+        let alert = UIAlertController(
+            title: "로그인 실패",
+            message: "로그인에 실패하셨습니다. 다시 입력해주세요",
+            preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: - @objc
@@ -140,19 +145,11 @@ class LoginVC: UIViewController {
                   return
               }
         
-        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: pw) { [weak self] user, error in
-            guard let self = self else { return }
-            if let error = error, user == nil {
-                let alert = UIAlertController(
-                    title: "로그인 실패",
-                    message: error.localizedDescription,
-                    preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "확인", style: .default))
-                self.present(alert, animated: true, completion: nil)
-                
-            } else {
+        manager.dispatchLogin(email: email, pw: pw) { result in
+            if result {
                 self.getUserProfile()
+            } else {
+                self.getAlertController()
             }
         }
     }

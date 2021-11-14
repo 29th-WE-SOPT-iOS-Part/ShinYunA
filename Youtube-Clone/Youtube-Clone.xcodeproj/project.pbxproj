@@ -26,6 +26,15 @@
 		EDF62443272981090099176B /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62442272981090099176B /* LoginManager.swift */; };
 		EDF62445272981A00099176B /* UIWindow+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF62444272981A00099176B /* UIWindow+.swift */; };
 		EDF624482729830F0099176B /* LockerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF624472729830F0099176B /* LockerVC.swift */; };
+		EDF6244E2729C1600099176B /* YoutubeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6244D2729C1600099176B /* YoutubeIcon.swift */; };
+		EDF624522729C6DC0099176B /* ThumbnailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF624512729C6DC0099176B /* ThumbnailTVC.swift */; };
+		EDF624552729CC420099176B /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF624542729CC420099176B /* Thumbnail.swift */; };
+		EDF624572729CD880099176B /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF624562729CD880099176B /* HomeManager.swift */; };
+		EDF624592729D63E0099176B /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF624582729D63E0099176B /* HomeHeaderView.swift */; };
+		EDF6245B2729D9210099176B /* ChannelCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6245A2729D9210099176B /* ChannelCVC.swift */; };
+		EDF6245D2729D9690099176B /* ToggleCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6245C2729D9690099176B /* ToggleCVC.swift */; };
+		EDF6245F2729E0300099176B /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF6245E2729E0300099176B /* Channel.swift */; };
+		EDF624612729E3370099176B /* HomeTopHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF624602729E3370099176B /* HomeTopHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +60,15 @@
 		EDF62442272981090099176B /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		EDF62444272981A00099176B /* UIWindow+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+.swift"; sourceTree = "<group>"; };
 		EDF624472729830F0099176B /* LockerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerVC.swift; sourceTree = "<group>"; };
+		EDF6244D2729C1600099176B /* YoutubeIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeIcon.swift; sourceTree = "<group>"; };
+		EDF624512729C6DC0099176B /* ThumbnailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailTVC.swift; sourceTree = "<group>"; };
+		EDF624542729CC420099176B /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		EDF624562729CD880099176B /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		EDF624582729D63E0099176B /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		EDF6245A2729D9210099176B /* ChannelCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCVC.swift; sourceTree = "<group>"; };
+		EDF6245C2729D9690099176B /* ToggleCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleCVC.swift; sourceTree = "<group>"; };
+		EDF6245E2729E0300099176B /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		EDF624602729E3370099176B /* HomeTopHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopHeader.swift; sourceTree = "<group>"; };
 		F25B8480B7A2E84F5C29634D /* Pods-Youtube-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube-Clone.release.xcconfig"; path = "Target Support Files/Pods-Youtube-Clone/Pods-Youtube-Clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,9 +143,10 @@
 		EDF32EB7270A145B00BE49FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EDF6243F272980B30099176B /* Services */,
+				EDF6244B2729C1280099176B /* Application */,
+				EDF6243F272980B30099176B /* Managers */,
 				EDF32EBB270A14EE00BE49FC /* Supports */,
-				EDF32EB9270A146C00BE49FC /* Extensions */,
+				EDF624532729CC260099176B /* Models */,
 				EDF32EBA270A147400BE49FC /* Views */,
 				EDF32EB8270A146500BE49FC /* ViewControllers */,
 			);
@@ -158,7 +177,8 @@
 		EDF32EBA270A147400BE49FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EDF32EC6270A1FA500BE49FC /* LoginTextField.swift */,
+				EDF624502729C62E0099176B /* Cells */,
+				EDF6244F2729C6270099176B /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,7 +186,8 @@
 		EDF32EBB270A14EE00BE49FC /* Supports */ = {
 			isa = PBXGroup;
 			children = (
-				EDF32E9E270A0F9400BE49FC /* AppDelegate.swift */,
+				EDF6244C2729C1480099176B /* Foundations */,
+				EDF32EB9270A146C00BE49FC /* Extensions */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -207,12 +228,74 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		EDF6243F272980B30099176B /* Services */ = {
+		EDF6243F272980B30099176B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				EDF62442272981090099176B /* LoginManager.swift */,
+				EDF624562729CD880099176B /* HomeManager.swift */,
 			);
-			path = Services;
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EDF6244B2729C1280099176B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EDF32E9E270A0F9400BE49FC /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EDF6244C2729C1480099176B /* Foundations */ = {
+			isa = PBXGroup;
+			children = (
+				EDF6244D2729C1600099176B /* YoutubeIcon.swift */,
+			);
+			path = Foundations;
+			sourceTree = "<group>";
+		};
+		EDF6244F2729C6270099176B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EDF624632729E3420099176B /* Home */,
+				EDF624622729E33B0099176B /* Login */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EDF624502729C62E0099176B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EDF624512729C6DC0099176B /* ThumbnailTVC.swift */,
+				EDF6245A2729D9210099176B /* ChannelCVC.swift */,
+				EDF6245C2729D9690099176B /* ToggleCVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EDF624532729CC260099176B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDF624542729CC420099176B /* Thumbnail.swift */,
+				EDF6245E2729E0300099176B /* Channel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EDF624622729E33B0099176B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EDF32EC6270A1FA500BE49FC /* LoginTextField.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EDF624632729E3420099176B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EDF624582729D63E0099176B /* HomeHeaderView.swift */,
+				EDF624602729E3370099176B /* HomeTopHeader.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,12 +413,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF6245D2729D9690099176B /* ToggleCVC.swift in Sources */,
+				EDF6245B2729D9210099176B /* ChannelCVC.swift in Sources */,
 				EDF32ECD270A2ED500BE49FC /* CheckVC.swift in Sources */,
 				EDF62445272981A00099176B /* UIWindow+.swift in Sources */,
+				EDF6244E2729C1600099176B /* YoutubeIcon.swift in Sources */,
 				EDF32ECB270A283F00BE49FC /* SignupVC.swift in Sources */,
 				EDF32ECF270A38E300BE49FC /* UIViewController+.swift in Sources */,
 				EDF32E9F270A0F9400BE49FC /* AppDelegate.swift in Sources */,
 				EDF32EC3270A19E400BE49FC /* UIColor+.swift in Sources */,
+				EDF624572729CD880099176B /* HomeManager.swift in Sources */,
 				EDF32EC9270A244000BE49FC /* UITextField+.swift in Sources */,
 				EDF32EC1270A15C200BE49FC /* LoginVC.swift in Sources */,
 				EDF624252729727E0099176B /* TabbarController.swift in Sources */,
@@ -343,7 +430,12 @@
 				EDF32EC7270A1FA500BE49FC /* LoginTextField.swift in Sources */,
 				EDF624272729729A0099176B /* HomeVC.swift in Sources */,
 				EDF32EA9270A0F9400BE49FC /* Youtube_Clone.xcdatamodeld in Sources */,
+				EDF624552729CC420099176B /* Thumbnail.swift in Sources */,
+				EDF624592729D63E0099176B /* HomeHeaderView.swift in Sources */,
+				EDF624612729E3370099176B /* HomeTopHeader.swift in Sources */,
+				EDF6245F2729E0300099176B /* Channel.swift in Sources */,
 				EDF32EC5270A1DDC00BE49FC /* UIView+.swift in Sources */,
+				EDF624522729C6DC0099176B /* ThumbnailTVC.swift in Sources */,
 				EDF624482729830F0099176B /* LockerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,7 +578,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4QG3GC35LA;
+				DEVELOPMENT_TEAM = J8A843466G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Youtube-Clone/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -514,7 +606,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4QG3GC35LA;
+				DEVELOPMENT_TEAM = J8A843466G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Youtube-Clone/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
