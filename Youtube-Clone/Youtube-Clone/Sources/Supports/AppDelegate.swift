@@ -20,8 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let navi = UINavigationController.init(rootViewController: LoginVC())
-        window.rootViewController = navi
+        if Login.shared.isLogin() {
+            window.rootViewController = TabbarController()
+        } else {
+            let navi = UINavigationController.init(rootViewController: LoginVC())
+            window.rootViewController = navi
+        }
         window.makeKeyAndVisible()
         window.backgroundColor = .white
         self.window = window

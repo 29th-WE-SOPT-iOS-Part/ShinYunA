@@ -31,14 +31,12 @@ class CheckVC: UIViewController {
         $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
         $0.backgroundColor = .googleBlue
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(touchUpConfirm), for: .touchUpInside)
     }
     private let logoutButton = UIButton().then {
-        $0.setTitle("로그아웃", for: .normal)
-        $0.setTitleColor(.white, for: .normal)
-        $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
-        $0.backgroundColor = .googleBlue
-        $0.layer.cornerRadius = 10
-        $0.isEnabled = true
+        $0.setTitle("다른 계정으로 로그인하기", for: .normal)
+        $0.setTitleColor(.googleBlue, for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 15)
         $0.addTarget(self, action: #selector(touchUpLogout), for: .touchUpInside)
     }
 
@@ -72,7 +70,6 @@ class CheckVC: UIViewController {
         logoutButton.snp.makeConstraints {
             $0.top.equalTo(checkButton.snp.bottom).offset(10)
             $0.leading.trailing.equalToSuperview().inset(30)
-            $0.height.equalTo(40)
         }
     }
     
@@ -82,9 +79,20 @@ class CheckVC: UIViewController {
         do {
             try FirebaseAuth.Auth.auth().signOut()
             print("로그아웃")
-            dismiss(animated: true, completion: nil)
+            
+            guard let presentingVC = presentingViewController as? UINavigationController else { return }
+            dismiss(animated: true) {
+                presentingVC.popToRootViewController(animated: false)
+            }
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+    
+    @objc
+    private func touchUpConfirm() {
+        let mainTabbar = TabbarController()
+        mainTabbar.modalPresentationStyle = .fullScreen
+        present(mainTabbar, animated: true, completion: nil)
     }
 }
