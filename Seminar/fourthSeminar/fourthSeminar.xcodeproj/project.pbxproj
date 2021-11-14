@@ -14,6 +14,10 @@
 		ED5A3EFC272D0E0200E15E1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5A3EFA272D0E0200E15E1B /* Main.storyboard */; };
 		ED5A3EFE272D0E0400E15E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5A3EFD272D0E0400E15E1B /* Assets.xcassets */; };
 		ED5A3F01272D0E0400E15E1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5A3EFF272D0E0400E15E1B /* LaunchScreen.storyboard */; };
+		EDABB5EB272D26E30071A84E /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABB5EA272D26E30071A84E /* APIConstant.swift */; };
+		EDABB5EE272D2A8F0071A84E /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABB5ED272D2A8F0071A84E /* NetworkResult.swift */; };
+		EDABB5F0272D2B830071A84E /* LoginResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABB5EF272D2B830071A84E /* LoginResponseData.swift */; };
+		EDABB5F2272D2BF90071A84E /* UserSignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABB5F1272D2BF90071A84E /* UserSignService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		ED5A3EFD272D0E0400E15E1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED5A3F00272D0E0400E15E1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED5A3F02272D0E0400E15E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDABB5EA272D26E30071A84E /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		EDABB5ED272D2A8F0071A84E /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		EDABB5EF272D2B830071A84E /* LoginResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseData.swift; sourceTree = "<group>"; };
+		EDABB5F1272D2BF90071A84E /* UserSignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +64,6 @@
 				2FA934E6049BD94E062BFBBD /* Pods-fourthSeminar.debug.xcconfig */,
 				14CD034B0825B3CC61EEA8E6 /* Pods-fourthSeminar.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +88,59 @@
 		ED5A3EF3272D0E0200E15E1B /* fourthSeminar */ = {
 			isa = PBXGroup;
 			children = (
-				ED5A3EF4272D0E0200E15E1B /* AppDelegate.swift */,
-				ED5A3EF6272D0E0200E15E1B /* SceneDelegate.swift */,
-				ED5A3EF8272D0E0200E15E1B /* ViewController.swift */,
+				EDABB5E5272D26470071A84E /* Source */,
+				EDABB5E6272D264C0071A84E /* Resource */,
+			);
+			path = fourthSeminar;
+			sourceTree = "<group>";
+		};
+		EDABB5E5272D26470071A84E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EDABB5E9272D26D90071A84E /* APIServices */,
+				EDABB5E8272D26910071A84E /* ViewController */,
+				EDABB5E7272D26720071A84E /* Supports */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		EDABB5E6272D264C0071A84E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
 				ED5A3EFA272D0E0200E15E1B /* Main.storyboard */,
 				ED5A3EFD272D0E0400E15E1B /* Assets.xcassets */,
 				ED5A3EFF272D0E0400E15E1B /* LaunchScreen.storyboard */,
 				ED5A3F02272D0E0400E15E1B /* Info.plist */,
 			);
-			path = fourthSeminar;
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EDABB5E7272D26720071A84E /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				ED5A3EF4272D0E0200E15E1B /* AppDelegate.swift */,
+				ED5A3EF6272D0E0200E15E1B /* SceneDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		EDABB5E8272D26910071A84E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED5A3EF8272D0E0200E15E1B /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EDABB5E9272D26D90071A84E /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				EDABB5EA272D26E30071A84E /* APIConstant.swift */,
+				EDABB5ED272D2A8F0071A84E /* NetworkResult.swift */,
+				EDABB5EF272D2B830071A84E /* LoginResponseData.swift */,
+				EDABB5F1272D2BF90071A84E /* UserSignService.swift */,
+			);
+			path = APIServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,8 +258,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDABB5EB272D26E30071A84E /* APIConstant.swift in Sources */,
+				EDABB5F2272D2BF90071A84E /* UserSignService.swift in Sources */,
+				EDABB5EE272D2A8F0071A84E /* NetworkResult.swift in Sources */,
 				ED5A3EF9272D0E0200E15E1B /* ViewController.swift in Sources */,
 				ED5A3EF5272D0E0200E15E1B /* AppDelegate.swift in Sources */,
+				EDABB5F0272D2B830071A84E /* LoginResponseData.swift in Sources */,
 				ED5A3EF7272D0E0200E15E1B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +415,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = fourthSeminar/Info.plist;
+				INFOPLIST_FILE = fourthSeminar/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -388,7 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = fourthSeminar/Info.plist;
+				INFOPLIST_FILE = fourthSeminar/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
