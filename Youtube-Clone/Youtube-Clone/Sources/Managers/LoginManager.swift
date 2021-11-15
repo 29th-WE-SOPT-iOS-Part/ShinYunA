@@ -10,26 +10,25 @@ import Firebase
 
 class Login: NSObject {
     static let shared = Login()
+    
     let login = "isLogin"
+    let def = UserDefaults.standard
+    
+    private override init() { }
     
     // MARK: - LOGIN
     func isLogin() -> Bool {
-        let def = UserDefaults.standard
         let flag = def.bool(forKey: login)
         
         return flag
     }
     
     func setLogin() {
-        let def = UserDefaults.standard
-        
         def.set(true, forKey: login)
         def.synchronize()
     }
     
     func setLoginOut() {
-        let def = UserDefaults.standard
-
         def.set(false, forKey: login)
         def.synchronize()
         
@@ -40,6 +39,8 @@ class Login: NSObject {
 
 final class LoginManager {
     static let shared = LoginManager()
+    
+    private init() { }
     
     func dispatchLogin(email: String, pw: String, completion: @escaping ((Bool) -> Void)) {
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: pw) { user, error in

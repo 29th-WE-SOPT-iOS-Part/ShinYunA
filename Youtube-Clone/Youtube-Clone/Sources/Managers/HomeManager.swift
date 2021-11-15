@@ -10,6 +10,8 @@ import UIKit
 struct HomeManager {
     static let shared = HomeManager()
     
+    private init() { }
+    
     var thumbnails: [Thumbnail] = [
         Thumbnail(image: YoutubeIcon.wesoptiOSPart, title: "1차 iOS 세미나 : 아요 킹 장혜령과 함께하는 애플 개발자 뛰어넘는 법", author: "WE iOS", views: "100억회", createdDate: "1년 전"),
         Thumbnail(image: YoutubeIcon.wesoptAndroidpart, title: "3차 Android 세미나 : 코틀린 문법 지키고 문다빈과 광야 가는 법", author: "WE Android", views: "200만회", createdDate: "5개월 전"),
