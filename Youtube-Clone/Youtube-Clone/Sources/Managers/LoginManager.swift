@@ -12,6 +12,7 @@ class Login: NSObject {
     static let shared = Login()
     
     let login = "isLogin"
+    let name = "name"
     let def = UserDefaults.standard
     
     private override init() { }
@@ -23,13 +24,21 @@ class Login: NSObject {
         return flag
     }
     
-    func setLogin() {
+    func userName() -> String {
+        guard let name = def.string(forKey: name) else { return "" }
+        
+        return name
+    }
+    
+    func setLogin(name: String) {
         def.set(true, forKey: login)
+        def.set(name, forKey: self.name)
         def.synchronize()
     }
     
     func setLoginOut() {
         def.set(false, forKey: login)
+        def.set("", forKey: self.name)
         def.synchronize()
         
         let navi = UINavigationController.init(rootViewController: LoginVC())
@@ -42,27 +51,27 @@ final class LoginManager {
     
     private init() { }
     
-    func dispatchLogin(email: String, pw: String, completion: @escaping ((Bool) -> Void)) {
+    func dispatchLogin(email: String, pw: String, name: String, completion: @escaping ((Bool) -> Void)) {
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: pw) { user, error in
             if let error = error, user == nil {
                 completion(false)
             } else {
                 if let currentEmail = FirebaseAuth.Auth.auth().currentUser?.email {
-                    print("파이어베이스 로그인 성공", currentEmail)
-                    Login.shared.setLogin()
+                    print("파이어베이스 로그인 성공", currentEmail, name)
+                    Login.shared.setLogin(name: name)
                     completion(true)
                 }
             }
         }
     }
     
-    func dispatchSignUp(email: String, pw: String, completion: @escaping ((Bool) -> Void)) {
+    func dispatchSignUp(email: String, pw: String, name: String, completion: @escaping ((Bool) -> Void)) {
         FirebaseAuth.Auth.auth().createUser(withEmail: email, password: pw) { (result, error) in
             if error != nil {
                 print("회원가입 실패")
                 completion(false)
             } else {
-                Login.shared.setLogin()
+                Login.shared.setLogin(name: name)
                 completion(true)
             }
         }

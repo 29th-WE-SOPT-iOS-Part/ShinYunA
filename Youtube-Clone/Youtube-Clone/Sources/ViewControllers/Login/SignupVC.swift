@@ -121,9 +121,6 @@ class SignupVC: UIViewController {
     private func getUserProfile() {
         let vc = CheckVC()
         vc.modalPresentationStyle = .fullScreen
-        if let text = self.nameTextfield.text {
-            vc.titleLabel.text = text + "님\n환영합니다!"
-        }
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -147,7 +144,7 @@ class SignupVC: UIViewController {
                   return
               }
         
-        manager.dispatchSignUp(email: email, pw: pw) { result in
+        manager.dispatchSignUp(email: email, pw: pw, name: name) { result in
             if result {
                 self.getUserProfile()
             } else {
