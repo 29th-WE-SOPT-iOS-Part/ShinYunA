@@ -45,6 +45,7 @@ class CheckVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupLayout()
+        setupData()
     }
     
     // MARK: - Setup Method
@@ -71,6 +72,10 @@ class CheckVC: UIViewController {
             $0.top.equalTo(checkButton.snp.bottom).offset(10)
             $0.leading.trailing.equalToSuperview().inset(30)
         }
+    }
+    
+    private func setupData() {
+        titleLabel.text = "\(Login.shared.userName()) 님\n안녕하세요🎉"
     }
     
     // MARK: - @objc

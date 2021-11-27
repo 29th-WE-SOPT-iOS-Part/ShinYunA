@@ -114,9 +114,6 @@ class LoginVC: UIViewController {
     private func getUserProfile() {
         let vc = CheckVC()
         vc.modalPresentationStyle = .fullScreen
-        if let text = nameTextfield.text {
-            vc.titleLabel.text = text + "님\n환영합니다!"
-        }
         present(vc, animated: true, completion: nil)
     }
     
@@ -140,12 +137,13 @@ class LoginVC: UIViewController {
     @objc
     private func touchUpSignIn() {
         guard let email = accountTextfield.text, !email.isEmpty,
-              let pw = passwordTextfield.text, !pw.isEmpty else {
+              let pw = passwordTextfield.text, !pw.isEmpty,
+              let name = nameTextfield.text, !name.isEmpty else {
                   print("이메일과 패스워드를 입력해주세요.")
                   return
               }
         
-        manager.dispatchLogin(email: email, pw: pw) { result in
+        manager.dispatchLogin(email: email, pw: pw, name: name) { result in
             if result {
                 self.getUserProfile()
             } else {
