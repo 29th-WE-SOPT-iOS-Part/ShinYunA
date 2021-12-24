@@ -34,11 +34,13 @@ class ThumbnailTVC: UITableViewCell {
     
     // MARK: - Properties
     private let manager = HomeManager.shared
+    weak var delegate: ImageViewDelegate?
 
     // MARK: - Initalizing
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupLayout()
+        setupTapGesture()
     }
     
     required init?(coder: NSCoder) {
@@ -52,6 +54,7 @@ class ThumbnailTVC: UITableViewCell {
                     menuButton,
                     titleLabel,
                     infoLabel])
+        sendSubviewToBack(contentView)
         
         thumbnailImage.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
@@ -81,8 +84,25 @@ class ThumbnailTVC: UITableViewCell {
             $0.bottom.equalToSuperview().inset(27)
         }
     }
+
+    private func setupTapGesture() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTappedThumbnail(_:)))
+        thumbnailImage.addGestureRecognizer(gesture)
+        thumbnailImage.isUserInteractionEnabled = true
+    }
+    
+    // MARK: - Selector
+    
+    @objc
+    private func didTappedThumbnail(_ gesture: UITapGestureRecognizer) {
+        let vc = VideoVC()
+        let index = getTableCellIndexPath()
+        vc.setVideoData(index: index)
+        delegate?.didClickedThumbnailImage(vc: vc)
+    }
     
     // MARK: - Public Method
+    
     public func getCellConfigureAt(_ index: Int) {
         thumbnailImage.image = manager.getThumbnailImage(index: index)
         titleLabel.text = manager.getTitle(index: index)
