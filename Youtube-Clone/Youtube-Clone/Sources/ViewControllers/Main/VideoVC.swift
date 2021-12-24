@@ -19,6 +19,7 @@ final class VideoVC: UIViewController {
     }
     private let backButton = UIButton().then {
         $0.setImage(YoutubeIcon.icn_dismissBtn, for: .normal)
+        $0.addTarget(self, action: #selector(touchUpBackButton), for: .touchUpInside)
     }
     private let titleLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 15)
@@ -40,6 +41,7 @@ final class VideoVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLayout()
         configUI()
     }
     
@@ -53,7 +55,7 @@ final class VideoVC: UIViewController {
                     infoLabel])
         
         thumbnailImage.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview()
+            $0.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
             $0.height.equalTo(212)
         }
         
@@ -94,5 +96,12 @@ final class VideoVC: UIViewController {
         let views = manager.getViews(index: index)
         let created = manager.getCreatedDate(index: index)
         infoLabel.text = "\(author) ・ 조회수 \(views) ・ \(created) "
+    }
+    
+    // MARK: - Selector
+    
+    @objc
+    private func touchUpBackButton() {
+        dismiss(animated: true, completion: nil)
     }
 }

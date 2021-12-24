@@ -125,6 +125,7 @@ extension HomeVC: UITableViewDelegate {
 // MARK: - ImageViewDelegate
 extension HomeVC: ImageViewDelegate {
     func didClickedThumbnailImage(vc: UIViewController) {
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
 }
