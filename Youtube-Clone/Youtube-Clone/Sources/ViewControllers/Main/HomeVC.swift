@@ -10,6 +10,10 @@ import UIKit
 import Then
 import SnapKit
 
+protocol ImageViewDelegate: HomeVC {
+    func didClickedThumbnailImage(vc: UIViewController)
+}
+
 class HomeVC: UIViewController {
     
     // MARK: - UI
@@ -69,6 +73,7 @@ extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ThumbnailTVC.identifier) as? ThumbnailTVC else { return UITableViewCell() }
         cell.getCellConfigureAt(indexPath.row)
+        cell.delegate = self
         return cell
     }
 }
@@ -94,10 +99,7 @@ extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
-}
-
-// MARK: - ScrollDelegate
-extension HomeVC {
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
         
@@ -117,5 +119,13 @@ extension HomeVC {
             } else {
                 scrollingUp = false
             }
+    }
+}
+
+// MARK: - ImageViewDelegate
+extension HomeVC: ImageViewDelegate {
+    func didClickedThumbnailImage(vc: UIViewController) {
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
 }

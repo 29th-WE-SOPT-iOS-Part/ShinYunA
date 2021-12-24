@@ -36,6 +36,8 @@ public enum YoutubeIcon {
     public static var wesoptWebPart: UIImage { .load(name: "wesoptWebPart")}
     public static var wesoptiOSPart: UIImage { .load(name: "wesoptiOSPart")}
     public static var windowSharingIcon: UIImage { .load(name: "windowSharingIcon")}
+    public static var icn_dismissBtn: UIImage { .load(name: "icn_dismissBtn")}
+    public static var icn_expandBtn: UIImage { .load(name: "icn_expandBtn")}
 }
 
 extension UIImage {
